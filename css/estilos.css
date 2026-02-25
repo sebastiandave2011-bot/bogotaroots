@@ -1,0 +1,269 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: rgb(206, 245, 245);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    color: blueviolet;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 167, 111);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    color: black;
+    padding: 10px 40px;
+}
+
+header .logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #00a76f;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.destacados {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: beige;
+    border-radius: 10px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00a76f;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: blanchedalmond;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.legend-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-flag {
+    height: 25px;
+    width: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+}
+
+.legend-wrapper p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-center h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social-img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.footer-social-img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .tarjeta {
+        width: 90%;
+    }
+}

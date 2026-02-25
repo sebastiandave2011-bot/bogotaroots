@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogotá Roots</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Bogotá_(escudo).png" alt="Escudo de Bogotá" title="Bogotá Roots">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Gastronomía</a></li>
+                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Naturaleza</a></li>
+                <li><a href="#">Arte</a></li>
+                <li><a href="#">¡Explora!</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="idioma">
+            <select>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/fondo bogota.jpg" style="width:100%">
+            <div class="text">Noche Bogotá</div>
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/fondo bogota 2.jpg" style="width:100%">
+            <div class="text">Catedral Primada</div>
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/Monserrate-Bogota.jpg" style="width:100%">
+            <div class="text">Monserrate</div>
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+      
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <section class="destacados">
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <img src="images/gastronomia.jpg" alt="Gastronomía">
+                <h3>Gastronomía</h3>
+                <p>La gastronomía en Bogotá combina tradición e innovación. Destacan platos típicos como el ajiaco santafereño, la changua y los tamales, representativos de la región andina.</p>
+                <a href="#" class="btn">Más información</a>
+            </div>
+            <div class="tarjeta">
+                <img src="images/cultura.jpg" alt="Cultura">
+                <h3>Cultura</h3>
+                <p>La ciudad alberga museos como el Museo del Oro y el Museo Botero, además de teatros y festivales. Su centro histórico, La Candelaria, refleja arte y vida académica.</p>
+                <a href="#" class="btn">Más información</a>
+            </div>
+            <div class="tarjeta">
+                <img src="images/nature.jpg" alt="Naturaleza">
+                <h3>Naturaleza</h3>
+                <p>Se destaca por sus cerros orientales y espacios verdes. Lugares como Monserrate y el Jardín Botánico ofrecen senderos y biodiversidad andina.</p>
+                <a href="#" class="btn">Más información</a>
+            </div>
+            <div class="tarjeta">
+                <img src="images/arte.jpg" alt="Arte">
+                <h3>Arte</h3>
+                <p>El arte en Bogotá se expresa en museos y galerías. Los murales en barrios como La Candelaria reflejan identidad, memoria y creatividad contemporánea.</p>
+                <a href="#" class="btn">Más información</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <div class="footer-container">
+       <div class="footer-left">
+    <div class="legend-wrapper">
+        <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+        <p>Explorando la esencia de la capital.</p>
+    </div>
+</div>
+
+        <div class="footer-center">
+            <h1>Bogotá Roots</h1>
+        </div>
+
+        <div class="footer-right">
+    <div class="social-wrapper">
+        <span>Síguenos en redes</span>
+        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+    </div>
+</div>
+</footer>
+
+    <script>
+        let slideIndex = 0;
+        let timeoutId;
+        showSlides();
+
+        function plusSlides(n) {
+            clearTimeout(timeoutId);
+            showManual(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            clearTimeout(timeoutId);
+            showManual(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            timeoutId = setTimeout(showSlides, 5000);
+        }
+
+        function showManual(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            timeoutId = setTimeout(showSlides, 5000);
+        }
+    </script> 
+</body>
+</html>
