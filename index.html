@@ -25,38 +25,22 @@
         </div>
 
         <nav>
-
-            <ul>
-
-                <li><a href="#">Inicio</a></li>
-
-                <li><a href="#">Gastronomía</a></li>
-
-                <li><a href="#">Cultura</a></li>
-
-                <li><a href="#">Naturaleza</a></li>
-
-                <li><a href="#">Arte</a></li>
-
-                <li><a href="#">¡Explora!</a></li>
-
-                <li><a href="#">Contacto</a></li>
-
-            </ul>
-
-        </nav>
-
+    <ul>
+        <li><a href="video.html" data-key="nav-inicio">Inicio</a></li>
+        <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+        <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+        <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+        <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+        <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+        <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+    </ul>
+</nav>
         <div class="idioma">
-
-            <select>
-
-                <option value="es">Español</option>
-
-                <option value="en">English</option>
-
-            </select>
-
-        </div>
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+        </select>
+    </div>
 
     </header>
 
@@ -126,7 +110,7 @@
 
                 <p>La gastronomía en Bogotá combina tradición e innovación. Destacan platos típicos como el ajiaco santafereño, la changua y los tamales, representativos de la región andina.</p>
 
-                <a href="#" class="btn">Más información</a>
+                <a href="gastronomia.html" class="btn" data-key="btn-mas">Más información</a>
 
             </div>
 
@@ -138,7 +122,7 @@
 
                 <p>La ciudad alberga museos como el Museo del Oro y el Museo Botero, además de teatros y festivales. Su centro histórico, La Candelaria, refleja arte y vida académica.</p>
 
-                <a href="#" class="btn">Más información</a>
+                <a href="cultura.html" class="btn" data-key="btn-mas">Más información</a>
 
             </div>
 
@@ -150,7 +134,7 @@
 
                 <p>Se destaca por sus cerros orientales y espacios verdes. Lugares como Monserrate y el Jardín Botánico ofrecen senderos y biodiversidad andina.</p>
 
-                <a href="#" class="btn">Más información</a>
+                <a href="naturaleza.html" class="btn" data-key="btn-mas">Más información</a>
 
             </div>
 
@@ -162,7 +146,7 @@
 
                 <p>El arte en Bogotá se expresa en museos y galerías. Los murales en barrios como La Candelaria reflejan identidad, memoria y creatividad contemporánea.</p>
 
-                <a href="#" class="btn">Más información</a>
+                <a href="arte.html" class="btn" data-key="btn-mas">Más información</a>
 
             </div>
 
@@ -182,7 +166,7 @@
 
         <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
 
-        <p>Explorando la esencia de la capital.</p>
+        <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
 
     </div>
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Bogotá Roots</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .contacto-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* Estilo del Formulario */
+        .buzon-contacto {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .buzon-contacto input, .buzon-contacto textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Redes Sociales y Linktree */
+        .redes-info {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .linktree-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #43E660; /* Color Linktree */
+            color: white;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .linktree-btn:hover {
+            transform: scale(1.05);
+            background: #39c652;
+        }
+
+        /* Botón Flotante WhatsApp */
+        .wpp-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .wpp-flotante:hover { transform: scale(1.1); }
+        .wpp-flotante img { width: 35px; height: 35px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/BR.png" alt="Logo"></div>
+        <nav>
+            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+        </nav>
+    </header>
+
+    <main class="seccion-detalle">
+        <h1 class="titulo-seccion">Ponte en Contacto</h1>
+
+        <div class="contacto-container">
+            <div class="redes-info">
+                <h2 class="subtitulo" style="border: none; text-align: center;">Nuestras Redes</h2>
+                <p>Síguenos para estar al tanto de las rutas y eventos en la capital.</p>
+                <img src="images/redes.png" alt="Redes" style="width: 150px; margin: 20px auto; display: block;">
+                <a href="https://linktr.ee/CoversNoPro" target="_blank" class="linktree-btn">VISITAR LINKTREE</a>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">Correo: sebastiandave2011@gmail.com</p>
+            </div>
+
+            <div class="buzon-contacto">
+                <h2 class="subtitulo" style="border-left: 5px solid #6c5ce7; padding-left: 10px;">Escríbenos</h2>
+                <form action="mailto:sebastiandave2011@gmail.com" method="post" enctype="text/plain">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre..." required>
+                    
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+                    
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">ENVIAR MENSAJE</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/573102256944" class="wpp-flotante" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="legend-wrapper">
+                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <p>Explorando la esencia de la capital.</p>
+                </div>
+            </div>
+            <div class="footer-center"><h1>Bogotá Roots</h1></div>
+            <div class="footer-right">
+                <div class="social-wrapper">
+                    <span>Síguenos en redes</span>
+                    <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

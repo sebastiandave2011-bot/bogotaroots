@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora Bogotá - Bogotá Roots</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 450px;
+            margin: 30px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .rutas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .ruta-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #6c5ce7;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .ruta-card h3 {
+            color: #6c5ce7;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/BR.png" alt="Logo"></div>
+        <nav>
+            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+        </nav>
+    </header>
+
+    <main class="seccion-detalle">
+        <h1 class="titulo-seccion">Mapa Interactivo</h1>
+        
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Navega por los puntos más emblemáticos de la capital. Hemos seleccionado las mejores ubicaciones de arte, cultura y naturaleza para tu visita.
+        </p>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d127253.33615234567!2d-74.1500!3d4.6500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMuseo%20del%20Oro%2C%20Monserrate%2C%20Distrito%20Grafiti%2C%20Jardin%20Botanico%20Bogota!5e0!3m2!1ses!2sco!4v1710000000000!5m2!1ses!2sco" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <h2 class="subtitulo">Rutas Sugeridas</h2>
+        
+        <div class="rutas-container">
+            <div class="ruta-card">
+                <h3>🏛️ Ruta Histórica</h3>
+                <p>Comienza en la Plaza de Bolívar, visita el Museo del Oro y termina perdiéndote en las calles coloridas de La Candelaria.</p>
+            </div>
+            <div class="ruta-card" style="border-left-color: #00a76f;">
+                <h3>🌿 Ruta de Conexión</h3>
+                <p>Sube al Cerro de Monserrate temprano en la mañana y finaliza tu tarde con un picnic en el Parque Simón Bolívar.</p>
+            </div>
+            <div class="ruta-card" style="border-left-color: #ff7675;">
+                <h3>🎨 Ruta Alternativa</h3>
+                <p>Descubre el arte urbano en Distrito Grafiti y explora las galerías de vanguardia en el barrio San Felipe.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="legend-wrapper">
+                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <p>Explorando la esencia de la capital.</p>
+                </div>
+            </div>
+            <div class="footer-center"><h1>Bogotá Roots</h1></div>
+            <div class="footer-right">
+                <div class="social-wrapper">
+                    <span>Síguenos en redes</span>
+                    <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

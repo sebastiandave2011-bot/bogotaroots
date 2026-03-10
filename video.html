@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Bogotá - Bogotá Roots</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilo específico para que el video se vea pro */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .video-description {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/BR.png" alt="Logo"></div>
+        <nav>
+            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+        </nav>
+    </header>
+
+    <main class="seccion-detalle">
+        <h1 class="titulo-seccion">Bogotá en 5 Días</h1>
+        
+        <div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/LEw-u2vbeT8?rel=0" 
+        title="Bogotá en 5 Días" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
+
+        <div class="video-description">
+            <p>Explora la majestuosidad de la capital colombiana. Desde el histórico barrio de <strong>La Candelaria</strong> [00:00:43] hasta la impresionante vista desde el <strong>Cerro de Monserrate</strong> [00:02:50], este video te guía por los atractivos más emblemáticos de nuestra ciudad.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="legend-wrapper">
+                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <p>Explorando la esencia de la capital.</p>
+                </div>
+            </div>
+            <div class="footer-center"><h1>Bogotá Roots</h1></div>
+            <div class="footer-right">
+                <div class="social-wrapper">
+                    <span>Síguenos en redes</span>
+                    <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
