@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturaleza - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilos necesarios para el Modal de Video */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .experiencia-item {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo"><img src="images/BR.png" alt="Logo"></div>
         <nav>
-            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+            <ul>
+                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+                <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+                <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+                <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+                <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+                <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+                <ul><li><a href="index.html">Inicio</a></li></ul>
+            </ul>
         </nav>
     </header>
 
@@ -20,20 +60,20 @@
         <div class="subseccion">
             <h2 class="subtitulo">Cerros y Miradores</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/ogkm45qQDi4?autoplay=1')">
                     <img src="images/monserrate.jpg" alt="Monserrate">
                     <h4>Cerro de Monserrate</h4>
-                    <p>El vigilante blanco de la ciudad. Sube en teleférico o funicular para tener la mejor vista panorámica de Bogotá.</p>
+                    <p>El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/CTY0a-xAK6Q?autoplay=1')">
                     <img src="images/guadalupe.jpg" alt="Guadalupe">
                     <h4>Cerro de Guadalupe</h4>
-                    <p>Un lugar de paz y espiritualidad que ofrece una perspectiva única y menos conocida de la sabana bogotana.</p>
+                    <p>Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/a8KlenCmtMQ?autoplay=1')">
                     <img src="images/quebrada-vieja.jpg" alt="Quebrada La Vieja">
                     <h4>Quebrada La Vieja</h4>
-                    <p>Un sendero ecológico en plena ciudad para conectar con el bosque andino y el agua pura de la montaña.</p>
+                    <p>Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.</p>
                 </div>
             </div>
         </div>
@@ -41,24 +81,33 @@
         <div class="subseccion">
             <h2 class="subtitulo">Parques y Jardines</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_iuSrwq7iAg?autoplay=1')">
                     <img src="images/jardin-botanico.jpg" alt="Jardín Botánico">
                     <h4>Jardín Botánico</h4>
-                    <p>Un refugio de biodiversidad con el Tropicario más grande de Sudamérica, ideal para conocer la flora colombiana.</p>
+                    <p>Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/OazJeZef_Kg?autoplay=1')">
                     <img src="images/simon-bolivar.jpg" alt="Parque Simón Bolívar">
                     <h4>Parque Simón Bolívar</h4>
-                    <p>El "pulmón del mundo" en Bogotá. Extensas zonas verdes y un lago central para disfrutar del aire libre.</p>
+                    <p>Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/YaylGtRq3Rk?autoplay=1')">
                     <img src="images/parque-chico.jpg" alt="Parque del Chicó">
                     <h4>Parque del Chicó</h4>
-                    <p>Un rincón de historia y elegancia con jardines de estilo francés y una de las casonas más bellas de la zona norte.</p>
+                    <p>Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.</p>
                 </div>
             </div>
         </div>
     </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe id="videoYoutube" style="position:absolute; top:0; left:0; width:100%; height:100%;" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -72,10 +121,28 @@
             <div class="footer-right">
                 <div class="social-wrapper">
                     <span>Síguenos en redes</span>
-                    <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
+                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function abrirModal(url) {
+            document.getElementById("videoYoutube").src = url;
+            document.getElementById("videoModal").style.display = "block";
+        }
+        function cerrarModal() {
+            document.getElementById("videoModal").style.display = "none";
+            document.getElementById("videoYoutube").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("videoModal")) {
+                cerrarModal();
+            }
+        }
+    </script>
 </body>
 </html>

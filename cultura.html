@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
-    </head>
+    <style>
+        /* Estilos necesarios para que funcione el Pop-up de video */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .experiencia-item {
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
     <header>
         <div class="logo"><img src="images/BR.png" alt="Logo"></div>
         <nav>
-            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+            <ul>
+                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+                <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+                <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+                <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+                <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+                <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+                <ul><li><a href="index.html">Inicio</a></li></ul>
+            </ul>
         </nav>
     </header>
 
@@ -20,20 +60,20 @@
         <div class="subseccion">
             <h2 class="subtitulo">Museos de Historia</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_rj9YWmLo5E?autoplay=1')">
                     <img src="images/museo-oro.jpg" alt="Museo del Oro">
                     <h4>Museo del Oro</h4>
-                    <p>La colección de orfebrería prehispánica más grande del mundo. Un viaje al pasado indígena de Colombia.</p>
+                    <p>Custodio de la colección de orfebrería prehispánica más grande del mundo, este museo ofrece un viaje místico al corazón de las culturas indígenas de Colombia. Sus salas resplandecen con piezas sagradas que narran cosmogonías antiguas y la maestría metalúrgica de nuestros ancestros.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/85s1nfEt6BQ?autoplay=1')">
                     <img src="images/museo-botero.jpg" alt="Museo Botero">
                     <h4>Museo Botero</h4>
-                    <p>Ubicado en una casona colonial, alberga las famosas obras de figuras voluminosas del maestro Fernando Botero.</p>
+                    <p>Ubicado en una imponente casona colonial, este recinto alberga la generosa donación del maestro Fernando Botero. Sus galerías invitan a contemplar el mundo a través de figuras voluminosas y pinceladas que han posicionado al arte colombiano en los museos más importantes del planeta.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/PXxcgrbXeLY?autoplay=1')">
                     <img src="images/quinta-bolivar.jpg" alt="Quinta de Bolívar">
                     <h4>Quinta de Bolívar</h4>
-                    <p>La casa histórica donde vivió el Libertador Simón Bolívar, rodeada de hermosos jardines al pie del cerro.</p>
+                    <p>Esta casa histórica, refugio del Libertador Simón Bolívar, es un oasis de paz al pie del cerro de Monserrate. Sus jardines centenarios y estancias originales conservan la atmósfera de la época republicana, permitiendo a los visitantes caminar por los pasillos donde se gestaron sueños de libertad.</p>
                 </div>
             </div>
         </div>
@@ -41,63 +81,70 @@
         <div class="subseccion">
             <h2 class="subtitulo">Arte y Teatro</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/qLCGzCLTU40?autoplay=1')">
                     <img src="images/teatro-colon.jpg" alt="Teatro Colón">
                     <h4>Teatro Colón</h4>
-                    <p>Joyero arquitectónico de estilo neoclásico y el teatro nacional de Colombia, famoso por su acústica perfecta.</p>
+                    <p>Considerado una joya arquitectónica de estilo neoclásico y el teatro nacional de Colombia, el Colón es famoso por su acústica perfecta y su ornamentación opulenta. Es el escenario donde la ópera, el ballet y el drama cobran vida bajo el resplandor de sus lámparas de cristal.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/TIiBQwsj55w?autoplay=1')">
                     <img src="images/candelaria.jpg" alt="Barrio La Candelaria">
                     <h4>Barrio La Candelaria</h4>
-                    <p>Caminar por sus calles empedradas es vivir la historia viva, entre bibliotecas, cafés y fachadas de colores.</p>
+                    <p>Caminar por sus calles empedradas es sumergirse en un museo vivo de fachadas coloridas y balcones coloniales. Este barrio, alma de la ciudad, es un laberinto de bibliotecas, cafés literarios y secretos históricos que guardan la esencia bohemia de la Bogotá antigua.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/BbFj902Rd9Q?autoplay=1')">
                     <img src="images/centro-cultural.jpg" alt="Gabriel García Márquez">
                     <h4>C.C. Gabriel García Márquez</h4>
-                    <p>Un espacio moderno dedicado a la literatura y las artes, diseñado por el arquitecto Rogelio Salmona.</p>
+                    <p>Diseñado por el célebre arquitecto Rogelio Salmona, este espacio circular es un homenaje moderno a la literatura y las artes. Con su juego de espejos de agua y ladrillo a la vista, es el punto de encuentro predilecto para quienes buscan inspiración entre libros y exposiciones contemporáneas.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
-
-    <div class="footer-container">
-
-       <div class="footer-left">
-
-    <div class="legend-wrapper">
-
-        <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
-
-        <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
-
-    </div>
-
-</div>
-
-
-
-        <div class="footer-center">
-
-            <h1>Bogotá Roots</h1>
-
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe id="videoYoutube" style="position:absolute; top:0; left:0; width:100%; height:100%;" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </div>
-
-
-
-        <div class="footer-right">
-
-    <div class="social-wrapper">
-
-        <span>Síguenos en redes</span>
-
-        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
-
     </div>
 
-</div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="legend-wrapper">
+                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <h1>Bogotá Roots</h1>
+            </div>
+            <div class="footer-right">
+                <div class="social-wrapper">
+                    <span>Síguenos en redes</span>
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
+                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-</footer>
+    <script>
+        function abrirModal(url) {
+            document.getElementById("videoYoutube").src = url;
+            document.getElementById("videoModal").style.display = "block";
+        }
+        function cerrarModal() {
+            document.getElementById("videoModal").style.display = "none";
+            document.getElementById("videoYoutube").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("videoModal")) {
+                cerrarModal();
+            }
+        }
+    </script>
 </body>
 </html>

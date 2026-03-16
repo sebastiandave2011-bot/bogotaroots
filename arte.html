@@ -5,12 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilos necesarios para el Modal de Video */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .experiencia-item {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo"><img src="images/BR.png" alt="Logo"></div>
         <nav>
-            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+            <ul>
+                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+                <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+                <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+                <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+                <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+                <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+                <ul><li><a href="index.html">Inicio</a></li></ul>
+            </ul>
         </nav>
     </header>
 
@@ -20,20 +60,20 @@
         <div class="subseccion">
             <h2 class="subtitulo">Arte Urbano</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/Uy5QActYMJk?autoplay=1')">
                     <img src="images/distrito-graffiti.jpg" alt="Distrito Grafiti">
                     <h4>Distrito Grafiti</h4>
-                    <p>Una galería a cielo abierto en la zona industrial donde artistas locales e internacionales llenan de color muros gigantes.</p>
+                    <p>Ubicado en la zona industrial de Puente Aranda, este proyecto ha transformado naves monumentales en una de las galerías a cielo abierto más grandes de Latinoamérica. Es un espacio donde artistas locales e internacionales convergen para plasmar murales de gran formato que exploran la identidad, el surrealismo y la crítica social, convirtiendo el gris industrial en un estallido de color y cultura urbana.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/aer6aHM1zdQ?autoplay=1')">
                     <img src="images/murales-candelaria.jpg" alt="Murales Candelaria">
                     <h4>Murales de La Candelaria</h4>
-                    <p>El centro histórico narra historias de resistencia y cultura a través de sus emblemáticos grafitis en fachadas coloniales.</p>
+                    <p>El centro histórico no solo guarda arquitectura colonial, sino que sus muros narran historias contemporáneas de resistencia y tradición. Los grafitis en fachadas centenarias crean un contraste visual fascinante, donde el arte urbano dialoga con la memoria de la ciudad, convirtiendo cada esquina en una parada obligatoria para los amantes de la narrativa visual y el simbolismo local.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/dWhbXNZGK0Y?autoplay=1')">
                     <img src="images/calle-26.jpg" alt="Calle 26">
                     <h4>Murales de la Calle 26</h4>
-                    <p>Un recorrido visual por la memoria del país plasmado en las paredes que conectan el aeropuerto con el centro.</p>
+                    <p>Esta avenida, columna vertebral que conecta el Aeropuerto El Dorado con el centro de la ciudad, se ha convertido en un corredor histórico plasmado en aerosol. A través de kilómetros de muros, diversos colectivos artísticos han retratado la biodiversidad, las luchas sociales y la esperanza del país, ofreciendo un recorrido visual que da la bienvenida a los visitantes con la fuerza del arte público.</p>
                 </div>
             </div>
         </div>
@@ -41,24 +81,33 @@
         <div class="subseccion">
             <h2 class="subtitulo">Galerías y Museos</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/4cFjvM9cGUM?autoplay=1')">
                     <img src="images/mambo.jpg" alt="MAMBO">
                     <h4>MAMBO</h4>
-                    <p>El Museo de Arte Moderno de Bogotá es el epicentro de las vanguardias y las propuestas artísticas más arriesgadas.</p>
+                    <p>Diseñado por el arquitecto Rogelio Salmona, el MAMBO es el epicentro de las vanguardias artísticas en la capital. Su estructura de ladrillo custodia las propuestas más arriesgadas y experimentales del arte contemporáneo, funcionando como un laboratorio creativo que desafía las percepciones tradicionales y promueve el diálogo entre los artistas y la ciudadanía.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/JjYrMKSj-vo?autoplay=1')">
                     <img src="images/fragmentos.jpg" alt="Fragmentos">
                     <h4>Fragmentos</h4>
-                    <p>Un "contra-monumento" creado por Doris Salcedo, donde el arte se funde con la historia y la paz de Colombia.</p>
+                    <p>Este 'contra-monumento', concebido por la artista Doris Salcedo, es un espacio de reflexión profunda sobre el conflicto y la paz en Colombia. El piso, forjado con el metal de armas fundidas, invita a los visitantes a caminar sobre la historia transformada en arte, creando un entorno de silencio y memoria que es único en el panorama artístico mundial.</p>
                 </div>
-                <div class="experiencia-item">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/uxKOwCZBQ54?autoplay=1')">
                     <img src="images/san-felipe.jpg" alt="Barrio San Felipe">
                     <h4>Barrio San Felipe</h4>
-                    <p>El "distrito de arte" por excelencia, lleno de casas convertidas en galerías, talleres de artistas y espacios creativos.</p>
+                    <p>Consolidado como el 'Distrito de Arte' por excelencia, este barrio residencial ha vivido una metamorfosis cultural sin precedentes. Sus casas se han convertido en galerías de vanguardia, estudios de diseño y talleres de artistas locales que abren sus puertas para fomentar un mercado de arte emergente y dinámico, posicionando a Bogotá como un referente en el circuito artístico internacional.</p>
                 </div>
             </div>
         </div>
     </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe id="videoYoutube" style="position:absolute; top:0; left:0; width:100%; height:100%;" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -72,10 +121,28 @@
             <div class="footer-right">
                 <div class="social-wrapper">
                     <span>Síguenos en redes</span>
-                    <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
+                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function abrirModal(url) {
+            document.getElementById("videoYoutube").src = url;
+            document.getElementById("videoModal").style.display = "block";
+        }
+        function cerrarModal() {
+            document.getElementById("videoModal").style.display = "none";
+            document.getElementById("videoYoutube").src = "";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("videoModal")) {
+                cerrarModal();
+            }
+        }
+    </script>
 </body>
 </html>
