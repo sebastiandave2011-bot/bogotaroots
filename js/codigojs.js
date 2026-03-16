@@ -1,4 +1,4 @@
-// TRADUCCIONES
+// TRADUCCIONES COMPLETAS
 const translations = {
     es: {
         "nav-inicio": "Inicio",
@@ -8,11 +8,13 @@ const translations = {
         "nav-arte": "Arte",
         "nav-explora": "¡Explora!",
         "nav-contacto": "Contacto",
+        "nav-home": "Inicio",
         "card-gastronomy-titulo": "Gastronomía",
         "card-gastronomy-desc": "La gastronomía en Bogotá combina tradición e innovación.",
         "btn-mas": "Más información",
         "footer-leyenda": "Explorando la esencia de la capital.",
-        "footer-redes": "Síguenos en redes"
+        "footer-redes": "Síguenos en redes",
+        "ph-nombre": "Tu nombre...", "ph-email": "ejemplo@correo.com", "ph-mensaje": "¿En qué podemos ayudarte?"
     },
     en: {
         "nav-inicio": "Home",
@@ -22,31 +24,42 @@ const translations = {
         "nav-arte": "Art",
         "nav-explora": "Explore!",
         "nav-contacto": "Contact",
+        "nav-home": "Home",
         "card-gastronomy-titulo": "Gastronomy",
         "card-gastronomy-desc": "Bogota's gastronomy combines tradition and innovation.",
         "btn-mas": "Read More",
         "footer-leyenda": "Exploring the essence of the capital.",
-        "footer-redes": "Follow us"
+        "footer-redes": "Follow us",
+        "ph-nombre": "Your name...", "ph-email": "example@mail.com", "ph-mensaje": "How can we help you?"
     }
 };
 
-// CAMBIAR IDIOMA
+// FUNCIÓN DE TRADUCCIÓN
 window.changeLanguage = function() {
     const select = document.getElementById("language-select");
-    if (!select) return; // Seguridad por si no encuentra el select
+    if (!select) return;
 
     const lang = select.value;
-    const elements = document.querySelectorAll("[data-key]");
+    localStorage.setItem("selectedLanguage", lang); // Guardar en memoria
 
-    elements.forEach(el => {
+    // Traducir elementos con data-key
+    document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.getAttribute("data-key");
         if (translations[lang] && translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
+
+    // Traducir Placeholders si existen
+    const inputNombre = document.getElementById("input-nombre");
+    if (inputNombre) {
+        inputNombre.placeholder = translations[lang]["ph-nombre"];
+        document.getElementById("input-email").placeholder = translations[lang]["ph-email"];
+        document.getElementById("txt-mensaje").placeholder = translations[lang]["ph-mensaje"];
+    }
 };
 
-// SLIDESHOW 
+// LÓGICA DEL SLIDESHOW
 let slideIndex = 0;
 let timeoutId;
 
@@ -61,38 +74,45 @@ window.currentSlide = function(n) {
 }
 
 function showSlides() {
-    let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
     if (slides.length === 0) return;
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+    for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
     slides[slideIndex-1].style.display = "block";  
     if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
     timeoutId = setTimeout(showSlides, 5000);
 }
 
 function showManual(n) {
-    let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+    if (slides.length === 0) return;
     if (n > slides.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
     slides[slideIndex-1].style.display = "block";  
     if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
 }
 
-document.addEventListener("DOMContentLoaded", showSlides);
+// EJECUCIÓN CRÍTICA AL CARGAR
+function inicializar() {
+    const savedLang = localStorage.getItem("selectedLanguage");
+    const select = document.getElementById("language-select");
+
+    if (savedLang && select) {
+        select.value = savedLang;
+        window.changeLanguage(); // Aplicar inmediatamente
+    }
+    
+    // Iniciar slideshow
+    if (document.getElementsByClassName("mySlides").length > 0) {
+        showSlides();
+    }
+}
+
+// Usar load para asegurar que todo el HTML (nav, footer) esté listo
+window.addEventListener("load", inicializar);

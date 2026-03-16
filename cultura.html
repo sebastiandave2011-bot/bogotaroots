@@ -49,52 +49,58 @@
                 <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
                 <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
                 <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
-                <ul><li><a href="index.html">Inicio</a></li></ul>
+                <ul><li><a href="index.html" data-key="nav-home">Inicio</a></li></ul>
             </ul>
         </nav>
+        <div class="idioma">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
     </header>
 
     <main class="seccion-detalle">
-        <h1 class="titulo-seccion">Cultura Bogotana</h1>
+        <h1 class="titulo-seccion" data-key="cult-titulo">Cultura Bogotana</h1>
 
         <div class="subseccion">
-            <h2 class="subtitulo">Museos de Historia</h2>
+            <h2 class="subtitulo" data-key="sub-museos">Museos de Historia</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_rj9YWmLo5E?autoplay=1')">
                     <img src="images/museo-oro.jpg" alt="Museo del Oro">
-                    <h4>Museo del Oro</h4>
-                    <p>Custodio de la colección de orfebrería prehispánica más grande del mundo, este museo ofrece un viaje místico al corazón de las culturas indígenas de Colombia. Sus salas resplandecen con piezas sagradas que narran cosmogonías antiguas y la maestría metalúrgica de nuestros ancestros.</p>
+                    <h4 data-key="oro-t">Museo del Oro</h4>
+                    <p data-key="oro-p">Custodio de la colección de orfebrería prehispánica más grande del mundo, este museo ofrece un viaje místico al corazón de las culturas indígenas de Colombia. Sus salas resplandecen con piezas sagradas que narran cosmogonías antiguas y la maestría metalúrgica de nuestros ancestros.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/85s1nfEt6BQ?autoplay=1')">
                     <img src="images/museo-botero.jpg" alt="Museo Botero">
-                    <h4>Museo Botero</h4>
-                    <p>Ubicado en una imponente casona colonial, este recinto alberga la generosa donación del maestro Fernando Botero. Sus galerías invitan a contemplar el mundo a través de figuras voluminosas y pinceladas que han posicionado al arte colombiano en los museos más importantes del planeta.</p>
+                    <h4 data-key="botero-t">Museo Botero</h4>
+                    <p data-key="botero-p">Ubicado en una imponente casona colonial, este recinto alberga la generosa donación del maestro Fernando Botero. Sus galerías invitan a contemplar el mundo a través de figuras voluminosas y pinceladas que han posicionado al arte colombiano en los museos más importantes del planeta.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/PXxcgrbXeLY?autoplay=1')">
                     <img src="images/quinta-bolivar.jpg" alt="Quinta de Bolívar">
-                    <h4>Quinta de Bolívar</h4>
-                    <p>Esta casa histórica, refugio del Libertador Simón Bolívar, es un oasis de paz al pie del cerro de Monserrate. Sus jardines centenarios y estancias originales conservan la atmósfera de la época republicana, permitiendo a los visitantes caminar por los pasillos donde se gestaron sueños de libertad.</p>
+                    <h4 data-key="bolivar-t">Quinta de Bolívar</h4>
+                    <p data-key="bolivar-p">Esta casa histórica, refugio del Libertador Simón Bolívar, es un oasis de paz al pie del cerro de Monserrate. Sus jardines centenarios y estancias originales conservan la atmósfera de la época republicana, permitiendo a los visitantes caminar por los pasillos donde se gestaron sueños de libertad.</p>
                 </div>
             </div>
         </div>
 
         <div class="subseccion">
-            <h2 class="subtitulo">Arte y Teatro</h2>
+            <h2 class="subtitulo" data-key="sub-teatro">Arte y Teatro</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/qLCGzCLTU40?autoplay=1')">
                     <img src="images/teatro-colon.jpg" alt="Teatro Colón">
-                    <h4>Teatro Colón</h4>
-                    <p>Considerado una joya arquitectónica de estilo neoclásico y el teatro nacional de Colombia, el Colón es famoso por su acústica perfecta y su ornamentación opulenta. Es el escenario donde la ópera, el ballet y el drama cobran vida bajo el resplandor de sus lámparas de cristal.</p>
+                    <h4 data-key="colon-t">Teatro Colón</h4>
+                    <p data-key="colon-p">Considerado una joya arquitectónica de estilo neoclásico y el teatro nacional de Colombia, el Colón es famoso por su acústica perfecta y su ornamentación opulenta. Es el escenario donde la ópera, el ballet y el drama cobran vida bajo el resplandor de sus lámparas de cristal.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/TIiBQwsj55w?autoplay=1')">
                     <img src="images/candelaria.jpg" alt="Barrio La Candelaria">
-                    <h4>Barrio La Candelaria</h4>
-                    <p>Caminar por sus calles empedradas es sumergirse en un museo vivo de fachadas coloridas y balcones coloniales. Este barrio, alma de la ciudad, es un laberinto de bibliotecas, cafés literarios y secretos históricos que guardan la esencia bohemia de la Bogotá antigua.</p>
+                    <h4 data-key="cande-t">Barrio La Candelaria</h4>
+                    <p data-key="cande-p">Caminar por sus calles empedradas es sumergirse en un museo vivo de fachadas coloridas y balcones coloniales. Este barrio, alma de la ciudad, es un laberinto de bibliotecas, cafés literarios y secretos históricos que guardan la esencia bohemia de la Bogotá antigua.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/BbFj902Rd9Q?autoplay=1')">
                     <img src="images/centro-cultural.jpg" alt="Gabriel García Márquez">
-                    <h4>C.C. Gabriel García Márquez</h4>
-                    <p>Diseñado por el célebre arquitecto Rogelio Salmona, este espacio circular es un homenaje moderno a la literatura y las artes. Con su juego de espejos de agua y ladrillo a la vista, es el punto de encuentro predilecto para quienes buscan inspiración entre libros y exposiciones contemporáneas.</p>
+                    <h4 data-key="ggm-t">C.C. Gabriel García Márquez</h4>
+                    <p data-key="ggm-p">Diseñado por el célebre arquitecto Rogelio Salmona, este espacio circular es un homenaje moderno a la literatura y las artes. Con su juego de espejos de agua y ladrillo a la vista, es el punto de encuentro predilecto para quienes buscan inspiración entre libros y exposiciones contemporáneas.</p>
                 </div>
             </div>
         </div>
@@ -117,12 +123,10 @@
                     <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
                 </div>
             </div>
-            <div class="footer-center">
-                <h1>Bogotá Roots</h1>
-            </div>
+            <div class="footer-center"><h1>Bogotá Roots</h1></div>
             <div class="footer-right">
                 <div class="social-wrapper">
-                    <span>Síguenos en redes</span>
+                    <span data-key="footer-redes">Síguenos en redes</span>
                     <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
                         <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
                     </a>
@@ -141,9 +145,41 @@
             document.getElementById("videoYoutube").src = "";
         }
         window.onclick = function(event) {
-            if (event.target == document.getElementById("videoModal")) {
-                cerrarModal();
+            if (event.target == document.getElementById("videoModal")) { cerrarModal(); }
+        }
+
+        const translations = {
+            "es": {
+                "nav-inicio": "video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
+                "cult-titulo": "Cultura Bogotana", "sub-museos": "Museos de Historia", "sub-teatro": "Arte y Teatro",
+                "oro-t": "Museo del Oro", "oro-p": "Custodio de la colección de orfebrería prehispánica más grande del mundo, este museo ofrece un viaje místico al corazón de las culturas indígenas de Colombia. Sus salas resplandecen con piezas sagradas que narran cosmogonías antiguas y la maestría metalúrgica de nuestros ancestros.",
+                "botero-t": "Museo Botero", "botero-p": "Ubicado en una imponente casona colonial, este recinto alberga la generosa donación del maestro Fernando Botero. Sus galerías invitan a contemplar el mundo a través de figuras voluminosas y pinceladas que han posicionado al arte colombiano en los museos más importantes del planeta.",
+                "bolivar-t": "Quinta de Bolívar", "bolivar-p": "Esta casa histórica, refugio del Libertador Simón Bolívar, es un oasis de paz al pie del cerro de Monserrate. Sus jardines centenarios y estancias originales conservan la atmósfera de la época republicana, permitiendo a los visitantes caminar por los pasillos donde se gestaron sueños de libertad.",
+                "colon-t": "Teatro Colón", "colon-p": "Considerado una joya arquitectónica de estilo neoclásico y el teatro nacional de Colombia, el Colón es famoso por su acústica perfecta y su ornamentación opulenta. Es el escenario donde la ópera, el ballet y el drama cobran vida bajo el resplandor de sus lámparas de cristal.",
+                "cande-t": "Barrio La Candelaria", "cande-p": "Caminar por sus calles empedradas es sumergirse en un museo vivo de fachadas coloridas y balcones coloniales. Este barrio, alma de la ciudad, es un laberinto de bibliotecas, cafés literarios y secretos históricos que guardan la esencia bohemia de la Bogotá antigua.",
+                "ggm-t": "C.C. Gabriel García Márquez", "ggm-p": "Diseñado por el célebre arquitecto Rogelio Salmona, este espacio circular es un homenaje moderno a la literatura y las artes. Con su juego de espejos de agua y ladrillo a la vista, es el punto de encuentro predilecto para quienes buscan inspiración entre libros y exposiciones contemporáneas.",
+                "footer-leyenda": "Explorando la esencia de la capital.", "footer-redes": "Síguenos en redes"
+            },
+            "en": {
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomy", "nav-cultura": "Culture", "nav-naturaleza": "Nature", "nav-arte": "Art", "nav-explora": "Explore!", "nav-contacto": "Contact", "nav-home": "Home",
+                "cult-titulo": "Bogota Culture", "sub-museos": "History Museums", "sub-teatro": "Art & Theater",
+                "oro-t": "Gold Museum", "oro-p": "Guardian of the world's largest pre-Hispanic gold collection, this museum offers a mystical journey to the heart of Colombia's indigenous cultures. Its rooms shine with sacred pieces that tell ancient cosmogonies and the metallurgical mastery of our ancestors.",
+                "botero-t": "Botero Museum", "botero-p": "Located in an imposing colonial mansion, this venue houses the generous donation of master Fernando Botero. Its galleries invite you to contemplate the world through voluminous figures and brushstrokes that have positioned Colombian art in the most important museums on the planet.",
+                "bolivar-t": "Bolivar's Villa", "bolivar-p": "This historic house, refuge of the Liberator Simon Bolivar, is an oasis of peace at the foot of the Monserrate hill. Its centennial gardens and original rooms preserve the atmosphere of the republican era, allowing visitors to walk through the corridors where dreams of freedom were created.",
+                "colon-t": "Colon Theater", "colon-p": "Considered a neoclassical architectural jewel and the national theater of Colombia, the Colon is famous for its perfect acoustics and opulent ornamentation. It is the stage where opera, ballet, and drama come to life under the glow of its crystal lamps.",
+                "cande-t": "La Candelaria Neighborhood", "cande-p": "Walking through its cobblestone streets is to immerse yourself in a living museum of colorful facades and colonial balconies. This neighborhood, the soul of the city, is a labyrinth of libraries, literary cafes, and historical secrets that guard the bohemian essence of old Bogota.",
+                "ggm-t": "Gabriel García Márquez Cultural Center", "ggm-p": "Designed by the celebrated architect Rogelio Salmona, this circular space is a modern tribute to literature and the arts. With its play of water mirrors and exposed brick, it is the favorite meeting point for those seeking inspiration among books and contemporary exhibitions.",
+                "footer-leyenda": "Exploring the essence of the capital.", "footer-redes": "Follow us"
             }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-select").value;
+            const elements = document.querySelectorAll("[data-key]");
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) { el.innerText = translations[lang][key]; }
+            });
         }
     </script>
 </body>

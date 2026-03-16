@@ -6,7 +6,6 @@
     <title>Descubre Bogotá - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
-        
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
@@ -38,35 +37,40 @@
     <header>
         <div class="logo"><img src="images/BR.png" alt="Logo"></div>
         <nav>
-    <ul>
-        <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
-        <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
-        <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
-        <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
-        <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
-        <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
-        <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
-        <ul><li><a href="index.html">Inicio</a></li>
-    </ul>
-            
+            <ul>
+                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+                <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+                <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+                <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+                <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+                <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+                <ul><li><a href="index.html">Inicio</a></li></ul>
+            </ul>
         </nav>
+        <div class="idioma">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
     </header>
 
     <main class="seccion-detalle">
-        <h1 class="titulo-seccion">Bogotá en 5 Días</h1>
+        <h1 class="titulo-seccion" data-key="video-titulo">Bogotá en 5 Días</h1>
         
         <div class="video-container">
-    <iframe 
-        src="https://www.youtube.com/embed/LEw-u2vbeT8?rel=0" 
-        title="Bogotá en 5 Días" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-    </iframe>
-</div>
+            <iframe 
+                src="https://www.youtube.com/embed/LEw-u2vbeT8?rel=0" 
+                title="Bogotá en 5 Días" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <div class="video-description">
-            <p>Explora la majestuosidad de la capital colombiana. Desde el histórico barrio de <strong>La Candelaria</strong> [00:00:43] hasta la impresionante vista desde el <strong>Cerro de Monserrate</strong> [00:02:50], este video te guía por los atractivos más emblemáticos de nuestra ciudad.</p>
+            <p data-key="video-desc">Explora la majestuosidad de la capital colombiana. Desde el histórico barrio de <strong>La Candelaria</strong> [00:00:43] hasta la impresionante vista desde el <strong>Cerro de Monserrate</strong> [00:02:50], este video te guía por los atractivos más emblemáticos de nuestra ciudad.</p>
         </div>
     </main>
 
@@ -75,21 +79,61 @@
             <div class="footer-left">
                 <div class="legend-wrapper">
                     <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
-                    <p>Explorando la esencia de la capital.</p>
+                    <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
                 </div>
             </div>
             <div class="footer-center"><h1>Bogotá Roots</h1></div>
             <div class="footer-right">
                 <div class="social-wrapper">
-                    <span>Síguenos en redes</span>
-        <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
-
-        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
-        </a>
+                    <span data-key="footer-redes">Síguenos en redes</span>
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
+                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
+    <script>
+        const translations = {
+            "es": {
+                "nav-inicio": "video Tour",
+                "nav-gastronomia": "Gastronomía",
+                "nav-cultura": "Cultura",
+                "nav-naturaleza": "Naturaleza",
+                "nav-arte": "Arte",
+                "nav-explora": "¡Explora!",
+                "nav-contacto": "Contacto",
+                "video-titulo": "Bogotá en 5 Días",
+                "video-desc": "Explora la majestuosidad de la capital colombiana. Desde el histórico barrio de La Candelaria [00:00:43] hasta la impresionante vista desde el Cerro de Monserrate [00:02:50], este video te guía por los atractivos más emblemáticos de nuestra ciudad.",
+                "footer-leyenda": "Explorando la esencia de la capital.",
+                "footer-redes": "Síguenos en redes"
+            },
+            "en": {
+                "nav-inicio": "Video Tour",
+                "nav-gastronomia": "Gastronomy",
+                "nav-cultura": "Culture",
+                "nav-naturaleza": "Nature",
+                "nav-arte": "Art",
+                "nav-explora": "Explore!",
+                "nav-contacto": "Contact",
+                "video-titulo": "Bogota in 5 Days",
+                "video-desc": "Explore the majesty of the Colombian capital. From the historic neighborhood of La Candelaria [00:00:43] to the stunning view from Monserrate Hill [00:02:50], this video guides you through the city's most emblematic attractions.",
+                "footer-leyenda": "Exploring the essence of the capital.",
+                "footer-redes": "Follow us"
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-select").value;
+            const elements = document.querySelectorAll("[data-key]");
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+        }
+    </script>
 </body>
 </html>

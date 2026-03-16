@@ -49,52 +49,58 @@
                 <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
                 <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
                 <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
-                <ul><li><a href="index.html">Inicio</a></li></ul>
+                <ul><li><a href="index.html" data-key="nav-home">Inicio</a></li></ul>
             </ul>
         </nav>
+        <div class="idioma">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
     </header>
 
     <main class="seccion-detalle">
-        <h1 class="titulo-seccion">Naturaleza Capitalina</h1>
+        <h1 class="titulo-seccion" data-key="nat-titulo">Naturaleza Capitalina</h1>
 
         <div class="subseccion">
-            <h2 class="subtitulo">Cerros y Miradores</h2>
+            <h2 class="subtitulo" data-key="sub-cerros">Cerros y Miradores</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/ogkm45qQDi4?autoplay=1')">
                     <img src="images/monserrate.jpg" alt="Monserrate">
-                    <h4>Cerro de Monserrate</h4>
-                    <p>El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.</p>
+                    <h4 data-key="mon-t">Cerro de Monserrate</h4>
+                    <p data-key="mon-p">El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/CTY0a-xAK6Q?autoplay=1')">
                     <img src="images/guadalupe.jpg" alt="Guadalupe">
-                    <h4>Cerro de Guadalupe</h4>
-                    <p>Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.</p>
+                    <h4 data-key="gua-t">Cerro de Guadalupe</h4>
+                    <p data-key="gua-p">Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/a8KlenCmtMQ?autoplay=1')">
                     <img src="images/quebrada-vieja.jpg" alt="Quebrada La Vieja">
-                    <h4>Quebrada La Vieja</h4>
-                    <p>Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.</p>
+                    <h4 data-key="que-t">Quebrada La Vieja</h4>
+                    <p data-key="que-p">Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.</p>
                 </div>
             </div>
         </div>
 
         <div class="subseccion">
-            <h2 class="subtitulo">Parques y Jardines</h2>
+            <h2 class="subtitulo" data-key="sub-parques">Parques y Jardines</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_iuSrwq7iAg?autoplay=1')">
                     <img src="images/jardin-botanico.jpg" alt="Jardín Botánico">
-                    <h4>Jardín Botánico</h4>
-                    <p>Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.</p>
+                    <h4 data-key="jar-t">Jardín Botánico</h4>
+                    <p data-key="jar-p">Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/OazJeZef_Kg?autoplay=1')">
                     <img src="images/simon-bolivar.jpg" alt="Parque Simón Bolívar">
-                    <h4>Parque Simón Bolívar</h4>
-                    <p>Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.</p>
+                    <h4 data-key="sim-t">Parque Simón Bolívar</h4>
+                    <p data-key="sim-p">Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/YaylGtRq3Rk?autoplay=1')">
                     <img src="images/parque-chico.jpg" alt="Parque del Chicó">
-                    <h4>Parque del Chicó</h4>
-                    <p>Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.</p>
+                    <h4 data-key="chi-t">Parque del Chicó</h4>
+                    <p data-key="chi-p">Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.</p>
                 </div>
             </div>
         </div>
@@ -114,13 +120,13 @@
             <div class="footer-left">
                 <div class="legend-wrapper">
                     <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
-                    <p>Explorando la esencia de la capital.</p>
+                    <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
                 </div>
             </div>
             <div class="footer-center"><h1>Bogotá Roots</h1></div>
             <div class="footer-right">
                 <div class="social-wrapper">
-                    <span>Síguenos en redes</span>
+                    <span data-key="footer-redes">Síguenos en redes</span>
                     <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
                         <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
                     </a>
@@ -139,9 +145,41 @@
             document.getElementById("videoYoutube").src = "";
         }
         window.onclick = function(event) {
-            if (event.target == document.getElementById("videoModal")) {
-                cerrarModal();
+            if (event.target == document.getElementById("videoModal")) { cerrarModal(); }
+        }
+
+        const translations = {
+            "es": {
+                "nav-inicio": "video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
+                "nat-titulo": "Naturaleza Capitalina", "sub-cerros": "Cerros y Miradores", "sub-parques": "Parques y Jardines",
+                "mon-t": "Cerro de Monserrate", "mon-p": "El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.",
+                "gua-t": "Cerro de Guadalupe", "gua-p": "Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.",
+                "que-t": "Quebrada La Vieja", "que-p": "Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.",
+                "jar-t": "Jardín Botánico", "jar-p": "Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.",
+                "sim-t": "Parque Simón Bolívar", "sim-p": "Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.",
+                "chi-t": "Parque del Chicó", "chi-p": "Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.",
+                "footer-leyenda": "Explorando la esencia de la capital.", "footer-redes": "Síguenos en redes"
+            },
+            "en": {
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomy", "nav-cultura": "Culture", "nav-naturaleza": "Nature", "nav-arte": "Art", "nav-explora": "Explore!", "nav-contacto": "Contact", "nav-home": "Home",
+                "nat-titulo": "Capital Nature", "sub-cerros": "Hills and Viewpoints", "sub-parques": "Parks and Gardens",
+                "mon-t": "Monserrate Hill", "mon-p": "The eternal guardian of the savanna and the city's main pilgrimage center. Whether ascending via its pedestrian path, cable car, or funicular, Monserrate offers an unparalleled panoramic view where the metropolis yields to the majesty of the Andes. It is a sacred space that combines faith, high-altitude gastronomy, and the best postcard of Bogota.",
+                "gua-t": "Guadalupe Hill", "gua-p": "Located at a higher altitude than its neighbor Monserrate, Guadalupe is a sanctuary of peace and spirituality that offers a unique and less explored perspective of the capital. Crowned by the imposing statue of the Virgin of the Immaculate Conception, this peak allows for the contemplation of the savanna's infinite expanse in an environment of silence and pure nature.",
+                "que-t": "La Vieja Creek", "que-p": "A water treasure hidden in the heart of the city. This ecological trail allows visitors to disconnect from the urban pace to immerse themselves in an Andean forest ecosystem. The sound of crystal-clear water and the density of the foliage offer a revitalizing hiking experience, reminding us of the vital importance of the hills as water regulators.",
+                "jar-t": "Botanical Garden", "jar-p": "A research and conservation sanctuary that houses South America's largest Tropicario. This space is a living classroom where the flora of various Colombian ecosystems is preserved, from dry forest to paramo, offering a biodiversity refuge essential for environmental education and scientific enjoyment.",
+                "sim-t": "Simon Bolivar Park", "sim-p": "A true green lung of the city, this extensive complex is the epicenter of recreation and major cultural events in Bogota. With its imposing central lake and vast green areas, it offers citizens a space of freedom for sports and family gatherings, acting as an oasis of fresh air amidst the urban dynamic.",
+                "chi-t": "Chico Park", "chi-p": "A corner where history and elegance meet in French-style gardens. The old manor house of the hacienda, now a museum, guards the memory of the northern part of the city. Its paths shaded by centennial trees and its preserved colonial architecture invite a peaceful stroll through Bogota's aristocratic past.",
+                "footer-leyenda": "Exploring the essence of the capital.", "footer-redes": "Follow us"
             }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-select").value;
+            const elements = document.querySelectorAll("[data-key]");
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) { el.innerText = translations[lang][key]; }
+            });
         }
     </script>
 </body>

@@ -1,85 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
- <meta charset="UTF-8">
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Bogotá Roots</title>
-
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
-
 <body>
-
     <header>
-
         <div class="logo">
-
             <img src="images/BR.png" alt="Logo" title="Bogotá Roots">
-
         </div>
-
         <nav>
-    <ul>
-        <li><a href="video.html" data-key="nav-inicio">Video Tour</a></li>
-        <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
-        <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
-        <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
-        <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
-        <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
-        <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
-    </ul>
-</nav>
+            <ul>
+                <li><a href="video.html" data-key="nav-inicio">Video Tour</a></li>
+                <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
+                <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
+                <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
+                <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
+                <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
+                <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
+            </ul>
+        </nav>
         <div class="idioma">
-        <select id="language-select" onchange="changeLanguage()">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-        </select>
-    </div>
-
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
     </header>
 
     <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="images/fondo bogota.jpg" style="width:100%">
-            <div class="text">Torre Colpatria</div>
+            <div class="text" data-key="slide-1">Torre Colpatria</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/fondo bogota 2.jpg" style="width:100%">
-            <div class="text">Catedral Primada</div>
+            <div class="text" data-key="slide-2">Catedral Primada</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/Monserrate-Bogota.jpg" style="width:100%">
-            <div class="text">Monserrate</div>
+            <div class="text" data-key="slide-3">Monserrate</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/rock al parque.jpg" style="width:100%">
-            <div class="text">Rock al Parque</div>
+            <div class="text" data-key="slide-4">Rock al Parque</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/chorro de quevedo.jpg" style="width:100%">
-            <div class="text">Chorro de Quevedo</div>
+            <div class="text" data-key="slide-5">Chorro de Quevedo</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/parque de la 93.jpg" style="width:100%">
-            <div class="text">Parque de la 93</div>
+            <div class="text" data-key="slide-6">Parque de la 93</div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/jardin botanico.jpg" style="width:100%">
-            <div class="text">Jardín Botánico</div>
+            <div class="text" data-key="slide-7">Jardín Botánico</div>
         </div>
-
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
@@ -96,225 +75,167 @@
         <span class="dot" onclick="currentSlide(7)"></span>
     </div>
 
-
-
     <section class="destacados">
-
         <div class="tarjetas">
-
             <div class="tarjeta">
-
                 <img src="images/gastronomia.jpg" alt="Gastronomía">
-
-                <h3>Gastronomía</h3>
-
-                <p>La gastronomía en La Candelaria destaca como un eje estratégico de saberes ancestrales y productos únicos. Esta zona posee una ventaja competitiva respaldada por 40 preparaciones típicas y el impulso de la Plaza de La Concordia. Con más de cien establecimientos y rutas especializadas, este ecosistema atrae al 30% de los turistas motivados por la cocina, preservando la identidad local frente a tendencias globales</p>
-
+                <h3 data-key="title-gastronomia">Gastronomía</h3>
+                <p data-key="desc-gastronomia">La gastronomía en La Candelaria destaca como un eje estratégico de saberes ancestrales y productos únicos. Esta zona posee una ventaja competitiva respaldada por 40 preparaciones típicas y el impulso de la Plaza de La Concordia. Con más de cien establecimientos y rutas especializadas, este ecosistema atrae al 30% de los turistas motivados por la cocina, preservando la identidad local frente a tendencias globales</p>
                 <a href="gastronomia.html" class="btn" data-key="btn-mas">Más información</a>
-
             </div>
 
             <div class="tarjeta">
-
                 <img src="images/cultura.jpg" alt="Cultura">
-
-                <h3>Cultura</h3>
-
-                <p>El centro histórico de Bogotá, La Candelaria, es reconocido por el Ministerio de Cultura como un Sector de Interés Cultural que conserva el trazado urbano de la época colonial. Alberga instituciones de relevancia global como el Museo del Oro del Banco de la República, el cual custodia la colección de orfebrería prehispánica más grande del mundo. De acuerdo con el Plan Decenal de Cultura, la ciudad se consolida como un escenario de diálogo intercultural, donde la memoria histórica se protege a través de sus más de 60 museos y teatros.</p>
-
+                <h3 data-key="title-cultura">Cultura</h3>
+                <p data-key="desc-cultura">El centro histórico de Bogotá, La Candelaria, es reconocido por el Ministerio de Cultura como un Sector de Interés Cultural que conserva el trazado urbano de la época colonial. Alberga instituciones de relevancia global como el Museo del Oro del Banco de la República, el cual custodia la colección de orfebrería prehispánica más grande del mundo. De acuerdo con el Plan Decenal de Cultura, la ciudad se consolida como un escenario de diálogo intercultural, donde la memoria histórica se protege a través de sus más de 60 museos y teatros.</p>
                 <a href="cultura.html" class="btn" data-key="btn-mas">Más información</a>
-
             </div>
 
             <div class="tarjeta">
-
                 <img src="images/nature.jpg" alt="Naturaleza">
-
-                <h3>Naturaleza</h3>
-
-                <p>Bogotá se caracteriza por su estrecha relación con los Cerros Orientales, considerados por la Secretaría de Ambiente como el principal pulmón de la ciudad con más de 14,000 hectáreas de bosque andino y páramo. El Cerro de Monserrate no solo es un centro de turismo religioso, sino un punto crítico para la observación de flora nativa. Por otro lado, el Jardín Botánico de Bogotá José Celestino Mutis lidera la investigación para la conservación de ecosistemas altoandinos, mitigando el impacto de la crisis climática en la zona urbana.</p>
-
+                <h3 data-key="title-naturaleza">Naturaleza</h3>
+                <p data-key="desc-naturaleza">Bogotá se caracteriza por su estrecha relación con los Cerros Orientales, considerados por la Secretaría de Ambiente como el principal pulmón de la ciudad con más de 14,000 hectáreas de bosque andino y páramo. El Cerro de Monserrate no solo es un centro de turismo religioso, sino un punto crítico para la observación de flora nativa. Por otro lado, el Jardín Botánico de Bogotá José Celestino Mutis lidera la investigación para la conservación de ecosistemas altoandinos, mitigando el impacto de la crisis climática en la zona urbana.</p>
                 <a href="naturaleza.html" class="btn" data-key="btn-mas">Más información</a>
-
             </div>
 
             <div class="tarjeta">
-
                 <img src="images/arte.jpg" alt="Arte">
-
-                <h3>Arte</h3>
-
-                <p>La escena del arte urbano en Bogotá ha posicionado a la ciudad como una de las capitales mundiales del graffiti, según reportes de la Red de Distritos Creativos. Espacios como el Distrito Grafiti en la localidad de Puente Aranda han transformado zonas industriales en galerías de arte público que fomentan el turismo creativo. Asimismo, el barrio San Felipe se ha consolidado como el distrito artístico de vanguardia, donde más de 20 galerías y talleres de artistas locales promueven el mercado del arte contemporáneo nacional.</p>
-
+                <h3 data-key="title-arte">Arte</h3>
+                <p data-key="desc-arte">La escena del arte urbano en Bogotá ha posicionado a la ciudad como una de las capitales mundiales del graffiti, según reportes de la Red de Distritos Creativos. Espacios como el Distrito Grafiti en la localidad de Puente Aranda han transformado zonas industriales en galerías de arte público que fomentan el turismo creativo. Asimismo, el barrio San Felipe se ha consolidado como el distrito artístico de vanguardia, donde más de 20 galerías y talleres de artistas locales promueven el mercado del arte contemporáneo nacional.</p>
                 <a href="arte.html" class="btn" data-key="btn-mas">Más información</a>
-
             </div>
-
         </div>
-
     </section>
-<section class="seccion-referencias">
-    <div class="contenedor-referencias">
-        <h2 class="titulo-referencias">Referencias Bibliográficas (APA 7)</h2>
-        <div class="linea-decorativa"></div>
-        
-        <ul class="lista-referencias">
-            <li>Cote Daza, S. P., Guzmán Jiménez, M. J., Quintero Hernández, L. F., Beltrán Virgüez, J. E., & Barón-Chivara, J. A. (2024). Análisis del Potencial del Turismo Gastronómico en la localidad La Candelaria, Bogotá. <i>Cuadernos de Administración</i>, 40(79). <a href="https://doi.org/10.25100/cdea.v40i79.13411" target="_blank">https://doi.org/10.25100/cdea.v40i79.13411</a></li>
-            
-            <li>Ministerio de Cultura de Colombia. (2023). <i>Patrimonio Cultural Material de Bogotá</i>. Recuperado de <a href="https://www.mincultura.gov.co" target="_blank">https://www.mincultura.gov.co</a></li>
-            
-            <li>Secretaría Distrital de Ambiente. (2024). <i>Estructura Ecológica Principal de Bogotá</i>. Recuperado de <a href="https://www.ambientebogota.gov.co" target="_blank">https://www.ambientebogota.gov.co</a></li>
-            
-            <li>Secretaría de Cultura, Recreación y Deporte. (2023). <i>Distritos Creativos de Bogotá</i>. Recuperado de <a href="https://www.culturarecreacionydeporte.gov.co" target="_blank">https://www.culturarecreacionydeporte.gov.co</a></li>
-            
-            <li>OpenAI. (2026). <i>ChatGPT (Modelo Gemini 3 Flash)</i> [Software de Inteligencia Artificial]. Generación de estructura y asistencia técnica. <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a></li>
-        </ul>
-    </div>
-</section>
 
+    <section class="seccion-referencias">
+        <div class="contenedor-referencias">
+            <h2 class="titulo-referencias" data-key="ref-titulo">Referencias Bibliográficas (APA 7)</h2>
+            <div class="linea-decorativa"></div>
+            <ul class="lista-referencias">
+                <li data-key="ref-1">Cote Daza, S. P., Guzmán Jiménez, M. J., Quintero Hernández, L. F., Beltrán Virgüez, J. E., & Barón-Chivara, J. A. (2024). Análisis del Potencial del Turismo Gastronómico en la localidad La Candelaria, Bogotá. <i>Cuadernos de Administración</i>, 40(79). <a href="https://doi.org/10.25100/cdea.v40i79.13411" target="_blank">https://doi.org/10.25100/cdea.v40i79.13411</a></li>
+                <li data-key="ref-2">Ministerio de Cultura de Colombia. (2023). <i>Patrimonio Cultural Material de Bogotá</i>. Recuperado de <a href="https://www.mincultura.gov.co" target="_blank">https://www.mincultura.gov.co</a></li>
+                <li data-key="ref-3">Secretaría Distrital de Ambiente. (2024). <i>Estructura Ecológica Principal de Bogotá</i>. Recuperado de <a href="https://www.ambientebogota.gov.co" target="_blank">https://www.ambientebogota.gov.co</a></li>
+                <li data-key="ref-4">Secretaría de Cultura, Recreación y Deporte. (2023). <i>Distritos Creativos de Bogotá</i>. Recuperado de <a href="https://www.culturarecreacionydeporte.gov.co" target="_blank">https://www.culturarecreacionydeporte.gov.co</a></li>
+                <li data-key="ref-5">OpenAI. (2026). <i>ChatGPT (Modelo Gemini 3 Flash)</i> [Software de Inteligencia Artificial]. Generación de estructura y asistencia técnica. <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a></li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
-
-    <div class="footer-container">
-
-       <div class="footer-left">
-
-    <div class="legend-wrapper">
-
-        <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
-
-        <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
-
-    </div>
-
-</div>
-
-
-
-        <div class="footer-center">
-
-            <h1>Bogotá Roots</h1>
-
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="legend-wrapper">
+                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <h1>Bogotá Roots</h1>
+            </div>
+            <div class="footer-right">
+                <div class="social-wrapper">
+                    <span data-key="footer-redes">Síguenos en redes</span>
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
+                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    </a>
+                </div>
+            </div>
         </div>
-
-
-
-        <div class="footer-right">
-
-    <div class="social-wrapper">
-
-        <span>Síguenos en redes</span>
-        <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
-
-        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
-        </a>
-
-    </div>
-
-</div>
-
-</footer>
-
-
+    </footer>
 
     <script>
-
+        // Lógica del Slider
         let slideIndex = 0;
-
         let timeoutId;
 
-        showSlides();
-
-
-
         function plusSlides(n) {
-
             clearTimeout(timeoutId);
-
             showManual(slideIndex += n);
-
         }
-
-
 
         function currentSlide(n) {
-
             clearTimeout(timeoutId);
-
             showManual(slideIndex = n);
-
         }
-
-
 
         function showSlides() {
-
             let i;
-
             let slides = document.getElementsByClassName("mySlides");
-
             let dots = document.getElementsByClassName("dot");
-
-            for (i = 0; i < slides.length; i++) {
-
-                slides[i].style.display = "none";  
-
-            }
-
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
             slideIndex++;
-
             if (slideIndex > slides.length) {slideIndex = 1}    
-
-            for (i = 0; i < dots.length; i++) {
-
-                dots[i].className = dots[i].className.replace(" active", "");
-
-            }
-
-            slides[slideIndex-1].style.display = "block";  
-
-            dots[slideIndex-1].className += " active";
-
+            for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+            if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";  
+            if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
             timeoutId = setTimeout(showSlides, 5000);
-
         }
-
-
 
         function showManual(n) {
-
             let i;
-
             let slides = document.getElementsByClassName("mySlides");
-
             let dots = document.getElementsByClassName("dot");
-
             if (n > slides.length) {slideIndex = 1}    
-
             if (n < 1) {slideIndex = slides.length}
-
-            for (i = 0; i < slides.length; i++) {
-
-                slides[i].style.display = "none";  
-
-            }
-
-            for (i = 0; i < dots.length; i++) {
-
-                dots[i].className = dots[i].className.replace(" active", "");
-
-            }
-
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
             slides[slideIndex-1].style.display = "block";  
-
             dots[slideIndex-1].className += " active";
-
             timeoutId = setTimeout(showSlides, 5000);
-
         }
 
+        // DICCIONARIO CON TEXTOS COMPLETOS
+        const translations = {
+            "es": {
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto",
+                "slide-1": "Torre Colpatria", "slide-2": "Catedral Primada", "slide-3": "Monserrate", "slide-4": "Rock al Parque", "slide-5": "Chorro de Quevedo", "slide-6": "Parque de la 93", "slide-7": "Jardín Botánico",
+                "title-gastronomia": "Gastronomía", 
+                "desc-gastronomia": "La gastronomía en La Candelaria destaca como un eje estratégico de saberes ancestrales y productos únicos. Esta zona posee una ventaja competitiva respaldada por 40 preparaciones típicas y el impulso de la Plaza de La Concordia. Con más de cien establecimientos y rutas especializadas, este ecosistema atrae al 30% de los turistas motivados por la cocina, preservando la identidad local frente a tendencias globales",
+                "title-cultura": "Cultura", 
+                "desc-cultura": "El centro histórico de Bogotá, La Candelaria, es reconocido por el Ministerio de Cultura como un Sector de Interés Cultural que conserva el trazado urbano de la época colonial. Alberga instituciones de relevancia global como el Museo del Oro del Banco de la República, el cual custodia la colección de orfebrería prehispánica más grande del mundo. De acuerdo con el Plan Decenal de Cultura, la ciudad se consolida como un escenario de diálogo intercultural, donde la memoria histórica se protege a través de sus más de 60 museos y teatros.",
+                "title-naturaleza": "Naturaleza", 
+                "desc-naturaleza": "Bogotá se caracteriza por su estrecha relación con los Cerros Orientales, considerados por la Secretaría de Ambiente como el principal pulmón de la ciudad con más de 14,000 hectáreas de bosque andino y páramo. El Cerro de Monserrate no solo es un centro de turismo religioso, sino un punto crítico para la observación de flora nativa. Por otro lado, el Jardín Botánico de Bogotá José Celestino Mutis lidera la investigación para la conservación de ecosistemas altoandinos, mitigando el impacto de la crisis climática en la zona urbana.",
+                "title-arte": "Arte", 
+                "desc-arte": "La escena del arte urbano en Bogotá ha posicionado a la ciudad como una de las capitales mundiales del graffiti, según reportes de la Red de Distritos Creativos. Espacios como el Distrito Grafiti en la localidad de Puente Aranda han transformado zonas industriales en galerías de arte público que fomentan el turismo creativo. Asimismo, el barrio San Felipe se ha consolidado como el distrito artístico de vanguardia, donde más de 20 galerías y talleres de artistas locales promueven el mercado del arte contemporáneo nacional.",
+                "btn-mas": "Más información", "ref-titulo": "Referencias Bibliográficas (APA 7)", "footer-leyenda": "Explorando la esencia de la capital.", "footer-redes": "Síguenos en redes"
+            },
+            "en": {
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomy", "nav-cultura": "Culture", "nav-naturaleza": "Nature", "nav-arte": "Art", "nav-explora": "Explore!", "nav-contacto": "Contact",
+                "slide-1": "Colpatria Tower", "slide-2": "Primacy Cathedral", "slide-3": "Monserrate Hill", "slide-4": "Rock at the Park", "slide-5": "Quevedo's Jet", "slide-6": "93rd Street Park", "slide-7": "Botanical Garden",
+                "title-gastronomia": "Gastronomy", 
+                "desc-gastronomia": "Gastronomy in La Candelaria stands out as a strategic axis of ancestral knowledge and unique products. This area has a competitive advantage backed by 40 typical preparations and the impulse of Plaza de La Concordia. With more than one hundred establishments and specialized routes, this ecosystem attracts 30% of tourists motivated by cuisine, preserving local identity against global trends.",
+                "title-cultura": "Culture", 
+                "desc-cultura": "Bogota's historic center, La Candelaria, is recognized by the Ministry of Culture as a Sector of Cultural Interest that preserves the colonial urban layout. It houses institutions of global relevance such as the Gold Museum of the Bank of the Republic, which guards the world's largest collection of pre-Hispanic goldsmithing. According to the Decennial Culture Plan, the city is established as a stage for intercultural dialogue, where historical memory is protected through its more than 60 museums and theaters.",
+                "title-naturaleza": "Nature", 
+                "desc-naturaleza": "Bogota is characterized by its close relationship with the Eastern Hills, considered by the Environment Secretariat as the city's main lung with more than 14,000 hectares of Andean forest and paramo. Monserrate Hill is not only a center for religious tourism but a critical point for native flora observation. On the other hand, the Jose Celestino Mutis Botanical Garden of Bogota leads research for the conservation of high Andean ecosystems, mitigating the impact of the climate crisis in the urban area.",
+                "title-arte": "Art", 
+                "desc-arte": "The urban art scene in Bogota has positioned the city as one of the graffiti capitals of the world, according to reports from the Creative Districts Network. Spaces like the Graffiti District in Puente Aranda have transformed industrial areas into public art galleries that promote creative tourism. Likewise, the San Felipe neighborhood has established itself as the avant-garde art district, where more than 20 galleries and workshops of local artists promote the national contemporary art market.",
+                "btn-mas": "More info", "ref-titulo": "Bibliographic References (APA 7)", "footer-leyenda": "Exploring the essence of the capital.", "footer-redes": "Follow us"
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-select").value;
+            localStorage.setItem("selectedLanguage", lang); // GUARDAR PREFERENCIA
+            
+            const elements = document.querySelectorAll("[data-key]");
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+        }
+
+        // CARGAR IDIOMA AL INICIAR
+        window.onload = function() {
+            const savedLang = localStorage.getItem("selectedLanguage");
+            if (savedLang) {
+                document.getElementById("language-select").value = savedLang;
+                changeLanguage();
+            }
+            showSlides(); // Iniciar slider
+        };
     </script>
-
 </body>
-
-</html> 
+</html>
