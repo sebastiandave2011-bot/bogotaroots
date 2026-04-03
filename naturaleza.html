@@ -6,7 +6,6 @@
     <title>Naturaleza - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
-        /* Estilos necesarios para el Modal de Video */
         .modal {
             display: none; 
             position: fixed; 
@@ -16,21 +15,27 @@
             width: 100%; 
             height: 100%; 
             background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(5px);
         }
         .modal-content {
             position: relative;
             margin: 5% auto;
             width: 80%;
             max-width: 800px;
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 167, 111, 0.3);
         }
         .close {
             position: absolute;
-            top: -40px;
-            right: 0;
+            top: 10px;
+            right: 20px;
             color: white;
             font-size: 35px;
             font-weight: bold;
             cursor: pointer;
+            z-index: 2100;
         }
         .experiencia-item {
             cursor: pointer;
@@ -66,17 +71,17 @@
         <div class="subseccion">
             <h2 class="subtitulo" data-key="sub-cerros">Cerros y Miradores</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/ogkm45qQDi4?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/ogkm45qQDi4?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Cerro+de+Monserrate+Bogota')">
                     <img src="images/monserrate.jpg" alt="Monserrate">
                     <h4 data-key="mon-t">Cerro de Monserrate</h4>
                     <p data-key="mon-p">El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/CTY0a-xAK6Q?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/CTY0a-xAK6Q?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Cerro+de+Guadalupe+Bogota')">
                     <img src="images/guadalupe.jpg" alt="Guadalupe">
                     <h4 data-key="gua-t">Cerro de Guadalupe</h4>
                     <p data-key="gua-p">Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/a8KlenCmtMQ?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/a8KlenCmtMQ?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Quebrada+La+Vieja+Bogota')">
                     <img src="images/quebrada-vieja.jpg" alt="Quebrada La Vieja">
                     <h4 data-key="que-t">Quebrada La Vieja</h4>
                     <p data-key="que-p">Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.</p>
@@ -87,17 +92,17 @@
         <div class="subseccion">
             <h2 class="subtitulo" data-key="sub-parques">Parques y Jardines</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_iuSrwq7iAg?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_iuSrwq7iAg?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Jardin+Botanico+Bogota')">
                     <img src="images/jardin-botanico.jpg" alt="Jardín Botánico">
                     <h4 data-key="jar-t">Jardín Botánico</h4>
                     <p data-key="jar-p">Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/OazJeZef_Kg?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/OazJeZef_Kg?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Parque+Simon+Bolivar+Bogota')">
                     <img src="images/simon-bolivar.jpg" alt="Parque Simón Bolívar">
                     <h4 data-key="sim-t">Parque Simón Bolívar</h4>
                     <p data-key="sim-p">Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/YaylGtRq3Rk?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/YaylGtRq3Rk?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Parque+del+Chico+Bogota')">
                     <img src="images/parque-chico.jpg" alt="Parque del Chicó">
                     <h4 data-key="chi-t">Parque del Chicó</h4>
                     <p data-key="chi-p">Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.</p>
@@ -108,9 +113,14 @@
 
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
+            <span class="close" onclick="cerrarModal()">×</span>
             <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
                 <iframe id="videoYoutube" style="position:absolute; top:0; left:0; width:100%; height:100%;" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div style="background-color: white; padding: 15px; text-align: center;">
+                <a id="btnUbicacion" href="#" target="_blank" style="display: inline-block; background-color: #15573f; color: white; border-radius: 50px; padding: 12px 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;">
+                    📍 Ver Ubicación en el Mapa
+                </a>
             </div>
         </div>
     </div>
@@ -136,8 +146,9 @@
     </footer>
 
     <script>
-        function abrirModal(url) {
-            document.getElementById("videoYoutube").src = url;
+        function abrirModal(urlVideo, urlMapa) {
+            document.getElementById("videoYoutube").src = urlVideo;
+            document.getElementById("btnUbicacion").href = urlMapa;
             document.getElementById("videoModal").style.display = "block";
         }
         function cerrarModal() {

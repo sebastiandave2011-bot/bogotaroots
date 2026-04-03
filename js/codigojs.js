@@ -114,5 +114,22 @@ function inicializar() {
     }
 }
 
+// FUNCIONES PARA EL MODAL DE REFERENCIAS
+function abrirRef() {
+    document.getElementById("modalRef").style.display = "block";
+}
+
+function cerrarRef() {
+    document.getElementById("modalRef").style.display = "none";
+}
+
+// Cerrar si hace clic fuera de la tarjeta
+window.onclick = function(event) {
+    let modal = document.getElementById("modalRef");
+    if (event.target == modal) {
+        cerrarRef();
+    }
+}
+
 // Usar load para asegurar que todo el HTML (nav, footer) esté listo
 window.addEventListener("load", inicializar);

@@ -247,6 +247,43 @@ header nav ul li a:hover {
     background-color: transparent;
     color: #00a76f;
 }
+/* ESTILOS PARA LA TARJETA DE REFERENCIAS (MODAL) */
+.modal-referencias {
+    display: none; 
+    position: fixed; 
+    z-index: 3000; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.contenido-referencias {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    position: relative;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover { color: #00a76f; }
+
+/*FOOTER*/
 
 footer {
     background-color: rgba(45, 52, 54, 0.9);
@@ -337,7 +374,7 @@ footer {
     letter-spacing: 1px;
     
    
-    background: linear-gradient(to right, #6c5ce7, #00a76f);
+    background: linear-gradient(to right, #15573f, #00a76f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -388,7 +425,7 @@ footer {
 
 .experiencia-item h4 {
     padding: 15px 15px 5px 15px;
-    color: #6c5ce7; 
+    color: #15573f; 
     font-size: 1.4rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
@@ -500,4 +537,15 @@ nav ul li a[href="index.html"]:hover {
 
 .lista-referencias a:hover {
     color: #6c5ce7; 
+}
+.modal-referencias {
+    display: none; 
+    position: fixed; 
+    z-index: 3000; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
 }

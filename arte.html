@@ -6,7 +6,6 @@
     <title>Arte - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
-        /* Estilos necesarios para el Modal de Video */
         .modal {
             display: none; 
             position: fixed; 
@@ -16,21 +15,27 @@
             width: 100%; 
             height: 100%; 
             background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(5px);
         }
         .modal-content {
             position: relative;
             margin: 5% auto;
             width: 80%;
             max-width: 800px;
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 167, 111, 0.3);
         }
         .close {
             position: absolute;
-            top: -40px;
-            right: 0;
+            top: 10px;
+            right: 20px;
             color: white;
             font-size: 35px;
             font-weight: bold;
             cursor: pointer;
+            z-index: 2100;
         }
         .experiencia-item {
             cursor: pointer;
@@ -66,17 +71,17 @@
         <div class="subseccion">
             <h2 class="subtitulo" data-key="sub-urbano">Arte Urbano</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/Uy5QActYMJk?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/Uy5QActYMJk?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Distrito+Grafiti+Bogota')">
                     <img src="images/distrito-graffiti.jpg" alt="Distrito Grafiti">
                     <h4 data-key="graf-t">Distrito Grafiti</h4>
                     <p data-key="graf-p">Ubicado en la zona industrial de Puente Aranda, este proyecto ha transformado naves monumentales en una de las galerías a cielo abierto más grandes de Latinoamérica. Es un espacio donde artistas locales e internacionales convergen para plasmar murales de gran formato que exploran la identidad, el surrealismo y la crítica social, convirtiendo el gris industrial en un estallido de color y cultura urbana.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/aer6aHM1zdQ?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/aer6aHM1zdQ?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=La+Candelaria+Bogota')">
                     <img src="images/murales-candelaria.jpg" alt="Murales Candelaria">
                     <h4 data-key="mura-t">Murales de La Candelaria</h4>
                     <p data-key="mura-p">El centro histórico no solo guarda arquitectura colonial, sino que sus muros narran historias contemporáneas de resistencia y tradición. Los grafitis en fachadas centenarias crean un contraste visual fascinante, donde el arte urbano dialoga con la memoria de la ciudad, convirtiendo cada esquina en una parada obligatoria para los amantes de la narrativa visual y el simbolismo local.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/dWhbXNZGK0Y?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/dWhbXNZGK0Y?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Murales+Calle+26+Bogota')">
                     <img src="images/calle-26.jpg" alt="Calle 26">
                     <h4 data-key="c26-t">Murales de la Calle 26</h4>
                     <p data-key="c26-p">Esta avenida, columna vertebral que conecta el Aeropuerto El Dorado con el centro de la ciudad, se ha convertido en un corredor histórico plasmado en aerosol. A través de kilómetros de muros, diversos colectivos artísticos han retratado la biodiversidad, las luchas sociales y la esperanza del país, ofreciendo un recorrido visual que da la bienvenida a los visitantes con la fuerza del arte público.</p>
@@ -87,17 +92,17 @@
         <div class="subseccion">
             <h2 class="subtitulo" data-key="sub-galerias">Galerías y Museos</h2>
             <div class="experiencias-grid">
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/4cFjvM9cGUM?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/4cFjvM9cGUM?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=MAMBO+Museo+de+Arte+Moderno+Bogota')">
                     <img src="images/mambo.jpg" alt="MAMBO">
                     <h4 data-key="mambo-t">MAMBO</h4>
                     <p data-key="mambo-p">Diseñado por el arquitecto Rogelio Salmona, el MAMBO es el epicentro de las vanguardias artísticas en la capital. Su estructura de ladrillo custodia las propuestas más arriesgadas y experimentales del arte contemporáneo, funcionando como un laboratorio creativo que desafía las percepciones tradicionales y promueve el diálogo entre los artistas y la ciudadanía.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/JjYrMKSj-vo?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/JjYrMKSj-vo?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Fragmentos+Espacio+de+Arte+y+Memoria+Bogota')">
                     <img src="images/fragmentos.jpg" alt="Fragmentos">
                     <h4 data-key="frag-t2">Fragmentos</h4>
                     <p data-key="frag-p2">Este 'contra-monumento', concebido por la artista Doris Salcedo, es un espacio de reflexión profunda sobre el conflicto y la paz en Colombia. El piso, forjado con el metal de armas fundidas, invita a los visitantes a caminar sobre la historia transformada en arte, creando un entorno de silencio y memoria que es único en el panorama artístico mundial.</p>
                 </div>
-                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/uxKOwCZBQ54?autoplay=1')">
+                <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/uxKOwCZBQ54?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Barrio+San+Felipe+Bogota')">
                     <img src="images/san-felipe.jpg" alt="Barrio San Felipe">
                     <h4 data-key="feli-t">Barrio San Felipe</h4>
                     <p data-key="feli-p">Consolidado como el 'Distrito de Arte' por excelencia, este barrio residencial ha vivido una metamorfosis cultural sin precedentes. Sus casas se han convertido en galerías de vanguardia, estudios de diseño y talleres de artistas locales que abren sus puertas para fomentar un mercado de arte emergente y dinámico, posicionando a Bogotá como un referente en el circuito artístico internacional.</p>
@@ -108,9 +113,14 @@
 
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
+            <span class="close" onclick="cerrarModal()">×</span>
             <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
                 <iframe id="videoYoutube" style="position:absolute; top:0; left:0; width:100%; height:100%;" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div style="background-color: white; padding: 15px; text-align: center;">
+                <a id="btnUbicacion" href="#" target="_blank" style="display: inline-block; background-color: #15573f; color: white; border-radius: 50px; padding: 12px 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;">
+                    📍 Ver Ubicación en el Mapa
+                </a>
             </div>
         </div>
     </div>
@@ -136,8 +146,9 @@
     </footer>
 
     <script>
-        function abrirModal(url) {
-            document.getElementById("videoYoutube").src = url;
+        function abrirModal(urlVideo, urlMapa) {
+            document.getElementById("videoYoutube").src = urlVideo;
+            document.getElementById("btnUbicacion").href = urlMapa;
             document.getElementById("videoModal").style.display = "block";
         }
         function cerrarModal() {
