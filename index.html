@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* ESTILOS GALERÍA MINIMALISTA */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .galeria-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .galeria-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ANIMACIONES  */
+        .logo img {
+            transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+        }
+        .logo img:hover {
+            transform: scale(1.08); /* SOLO CRECE un 8%, NO SE TORCE */
+            filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); /* Mantiene la sombra verde */
+        }
+
+        .footer-flag {
+            transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave normal */
+        }
+        .footer-flag:hover {
+            transform: scale(1.2); /* SOLO CRECE un 20%, NO SE TORCE */
+            filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.4)); /* Mantiene el resplandor blanco */
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/BR.png" alt="Logo" title="Bogotá Roots">
+            <img src="images/BR.png" alt="Logo" title="Bogotá Roots" style="cursor: pointer;" onclick="abrirGaleria()">
         </div>
         <nav>
             <ul>
@@ -121,6 +158,29 @@
         </div>
     </section>
 
+    <div id="modalGaleria" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(8px); overflow-y: auto;">
+        <span onclick="cerrarGaleria()" style="position: fixed; top: 20px; right: 30px; font-size: 45px; font-weight: bold; color: white; cursor: pointer; z-index: 10000;">&times;</span>
+        <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px;" data-key="galeria-titulo">Galería de Bogotá Roots</h2>
+            
+            /* GALERIA DE FOTOS */
+
+            <div class="galeria-grid">
+                <img src="images/fondo bogota.jpg" alt="Bogotá 1">
+                <img src="images/fondo bogota 2.jpg" alt="Bogotá 2">
+                <img src="images/Monserrate-Bogota.jpg" alt="Monserrate">
+                <img src="images/rock al parque.jpg" alt="Rock al Parque">
+                <img src="images/chorro de quevedo.jpg" alt="Chorro de Quevedo">
+                <img src="images/parque de la 93.jpg" alt="Parque 93">
+                <img src="images/jardin botanico.jpg" alt="Jardín Botánico">
+                <img src="images/gastronomia.jpg" alt="Gastronomía">
+                <img src="images/cultura.jpg" alt="Cultura">
+                <img src="images/nature.jpg" alt="Naturaleza">
+                <img src="images/arte.jpg" alt="Arte">
+            </div>
+        </div>
+    </div>
+
     <div id="modalRef" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px);">
         <div style="background-color: #fff; margin: 5% auto; padding: 30px; border-radius: 20px; width: 80%; max-width: 700px; box-shadow: 0 5px 30px rgba(0,0,0,0.5); position: relative; max-height: 80vh; overflow-y: auto;">
             <span onclick="cerrarRef()" style="position: absolute; top: 15px; right: 20px; font-size: 30px; font-weight: bold; color: #15573f; cursor: pointer;">&times;</span>
@@ -140,7 +200,9 @@
         <div class="footer-container">
             <div class="footer-left">
                 <div class="legend-wrapper">
-                    <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <a href="https://bogota.gov.co/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    </a>
                     <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
                 </div>
             </div>
@@ -160,7 +222,6 @@
     </footer>
 
     <script>
-        // Lógica del Slider (se mantiene igual)
         let slideIndex = 0;
         let timeoutId;
 
@@ -212,7 +273,8 @@
                 "desc-naturaleza": "Bogotá se caracteriza por su estrecha relación con los Cerros Orientales, considerados por la Secretaría de Ambiente como el principal pulmón de la ciudad con más de 14,000 hectáreas de bosque andino y páramo. El Cerro de Monserrate no solo es un centro de turismo religioso, sino un punto crítico para la observación de flora nativa. Por otro lado, el Jardín Botánico de Bogotá José Celestino Mutis lidera la investigación para la conservación de ecosistemas altoandinos, mitigando el impacto de la crisis climática en la zona urbana.",
                 "title-arte": "Arte", 
                 "desc-arte": "La escena del arte urbano en Bogotá ha posicionado a la ciudad como una de las capitales mundiales del graffiti, según reportes de la Red de Distritos Creativos. Espacios como el Distrito Grafiti en la localidad de Puente Aranda han transformado zonas industriales en galerías de arte público que fomentan el turismo creativo. Asimismo, el barrio San Felipe se ha consolidado como el distrito artístico de vanguardia, donde más de 20 galerías y talleres de artistas locales promueven el mercado del arte contemporáneo nacional.",
-                "btn-mas": "Más información", "ref-titulo": "Referencias Bibliográficas (APA 7)", "footer-leyenda": "Explorando la esencia de la capital."
+                "btn-mas": "Más información", "ref-titulo": "Referencias Bibliográficas (APA 7)", "footer-leyenda": "Explorando la esencia de la capital.",
+                "galeria-titulo": "Galería de Bogotá Roots"
             },
             "en": {
                 "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomy", "nav-cultura": "Culture", "nav-naturaleza": "Nature", "nav-arte": "Art", "nav-explora": "Explore!", "nav-contacto": "Contact",
@@ -225,7 +287,8 @@
                 "desc-naturaleza": "Bogota is characterized by its close relationship with the Eastern Hills, considered by the Environment Secretariat as the city's main lung with more than 14,000 hectares of Andean forest and paramo. Monserrate Hill is not only a center for religious tourism but a critical point for native flora observation. On the other hand, the Jose Celestino Mutis Botanical Garden of Bogota leads research for the conservation of high Andean ecosystems, mitigating the impact of the climate crisis in the urban area.",
                 "title-arte": "Art", 
                 "desc-arte": "The urban art scene in Bogota has positioned the city as one of the graffiti capitals of the world, according to reports from the Creative Districts Network. Spaces like the Graffiti District in Puente Aranda have transformed industrial areas into public art galleries that promote creative tourism. Likewise, the San Felipe neighborhood has established itself as the avant-garde art district, where more than 20 galleries and workshops of local artists promote the national contemporary art market.",
-                "btn-mas": "More info", "ref-titulo": "Bibliographic References (APA 7)", "footer-leyenda": "Exploring the essence of the capital."
+                "btn-mas": "More info", "ref-titulo": "Bibliographic References (APA 7)", "footer-leyenda": "Exploring the essence of the capital.",
+                "galeria-titulo": "Bogota Roots Gallery"
             }
         };
 
@@ -242,13 +305,22 @@
             });
         }
 
-        // LAS ÚNICAS DOS FUNCIONES QUE AÑADIMOS PARA EL MODAL
         function abrirRef() {
             document.getElementById("modalRef").style.display = "block";
         }
 
         function cerrarRef() {
             document.getElementById("modalRef").style.display = "none";
+        }
+
+        function abrirGaleria() {
+            document.getElementById("modalGaleria").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cerrarGaleria() {
+            document.getElementById("modalGaleria").style.display = "none";
+            document.body.style.overflow = "auto";
         }
 
         window.onload = function() {
