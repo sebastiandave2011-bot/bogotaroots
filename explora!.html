@@ -98,7 +98,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="#" onclick="abrirVideoTour(event)" data-key="nav-inicio">Video Tour</a></li>
                 <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
                 <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
                 <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
@@ -156,17 +156,35 @@
         <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
             <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px;" data-key="galeria-titulo">Galería de Bogotá Roots</h2>
             <div class="galeria-grid">
-                <img src="images/fondo bogota.jpg" alt="Bogotá 1">
-                <img src="images/fondo bogota 2.jpg" alt="Bogotá 2">
-                <img src="images/Monserrate-Bogota.jpg" alt="Monserrate">
-                <img src="images/rock al parque.jpg" alt="Rock al Parque">
-                <img src="images/chorro de quevedo.jpg" alt="Chorro de Quevedo">
-                <img src="images/parque de la 93.jpg" alt="Parque 93">
-                <img src="images/jardin botanico.jpg" alt="Jardín Botánico">
-                <img src="images/gastronomia.jpg" alt="Gastronomía">
-                <img src="images/cultura.jpg" alt="Cultura">
-                <img src="images/nature.jpg" alt="Naturaleza">
-                <img src="images/arte.jpg" alt="Arte">
+              <img src="ImagenesPropiasWebp/BogotaRoots (111).webp" alt="Bogotá Roots 111" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (112).webp" alt="Bogotá Roots 112" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (113).webp" alt="Bogotá Roots 113" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (114).webp" alt="Bogotá Roots 114" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (115).webp" alt="Bogotá Roots 115" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (116).webp" alt="Bogotá Roots 116" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (117).webp" alt="Bogotá Roots 117" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (118).webp" alt="Bogotá Roots 118" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (119).webp" alt="Bogotá Roots 119" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (120).webp" alt="Bogotá Roots 120" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (121).webp" alt="Bogotá Roots 121" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (122).webp" alt="Bogotá Roots 122" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (123).webp" alt="Bogotá Roots 123" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (124).webp" alt="Bogotá Roots 124" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (125).webp" alt="Bogotá Roots 125" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (126).webp" alt="Bogotá Roots 126" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (127).webp" alt="Bogotá Roots 127" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (128).webp" alt="Bogotá Roots 128" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (129).webp" alt="Bogotá Roots 129" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (130).webp" alt="Bogotá Roots 130" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (131).webp" alt="Bogotá Roots 131" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (132).webp" alt="Bogotá Roots 132" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (133).webp" alt="Bogotá Roots 133" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (134).webp" alt="Bogotá Roots 134" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (135).webp" alt="Bogotá Roots 135" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (136).webp" alt="Bogotá Roots 136" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (137).webp" alt="Bogotá Roots 137" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (138).webp" alt="Bogotá Roots 138" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (139).webp" alt="Bogotá Roots 139" loading="lazy">
             </div>
         </div>
     </div>
@@ -185,7 +203,9 @@
             </ul>
         </div>
     </div>
-
+    <a href="https://nahumb.itch.io/brgame" target="_blank" class="boton-flotante" title="¡Juega Bogotá Roots!">
+        <img src="images/BRico.webp" alt="Icono Bogotá Roots">
+    </a>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -212,7 +232,6 @@
     </footer>
 
     <script>
-        // AÑADIDO: Funciones para la Galería y Referencias
         function abrirRef() {
             document.getElementById("modalRef").style.display = "block";
         }
@@ -231,15 +250,57 @@
             document.body.style.overflow = "auto";
         }
 
-        // AÑADIDO: Cierra cualquier modal si haces clic fuera de la caja
+        // =========================================
+        // NUEVO: LÓGICA DEL MODAL VIDEO TOUR GLOBAL
+        // =========================================
+        function abrirVideoTour(event) {
+            event.preventDefault(); 
+
+            const videoId = "ZXUdKVIGflo"; 
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+            let modal = document.getElementById('globalVideoTourModal');
+
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'globalVideoTourModal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-tour" onclick="cerrarVideoTour()">×</span>
+                        <div class="video-container">
+                            <iframe id="globalTourIframe" src="${iframeSrc}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            } else {
+                document.getElementById('globalTourIframe').src = iframeSrc;
+            }
+
+            modal.style.display = 'block';
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function cerrarVideoTour() {
+            const modal = document.getElementById('globalVideoTourModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.getElementById('globalTourIframe').src = ""; 
+                document.body.style.overflow = "auto"; 
+            }
+        }
+
+        // Cierra cualquier modal si haces clic fuera de la caja (ACTUALIZADO)
         window.onclick = function(event) {
             if (event.target == document.getElementById("modalGaleria")) { cerrarGaleria(); }
             if (event.target == document.getElementById("modalRef")) { cerrarRef(); }
+            const modalVideoTour = document.getElementById('globalVideoTourModal');
+            if (modalVideoTour && event.target == modalVideoTour) { cerrarVideoTour(); }
         }
 
         const translations = {
             "es": {
-                "nav-inicio": "video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
                 "exp-titulo": "Mapa Interactivo",
                 "exp-p": "Navega por los puntos más emblemáticos de la capital. Hemos seleccionado las mejores ubicaciones de arte, cultura y naturaleza para tu visita.",
                 "exp-sub": "Rutas Sugeridas",
@@ -284,7 +345,6 @@
             });
         }
 
-        // AÑADIDO: Cargar el idioma guardado al cargar la página
         window.onload = function() {
             const savedLang = localStorage.getItem("selectedLanguage");
             if (savedLang) {

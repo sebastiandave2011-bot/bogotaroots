@@ -5,78 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturaleza - Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            left: 0; 
-            top: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0,0,0,0.9);
-            backdrop-filter: blur(5px);
-        }
-        .modal-content {
-            position: relative;
-            margin: 5% auto;
-            width: 80%;
-            max-width: 800px;
-            background-color: #000;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 167, 111, 0.3);
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            color: white;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 2100;
-        }
-        .experiencia-item {
-            cursor: pointer;
-        }
-
-        /* ESTILOS NUEVOS: GALERÍA MINIMALISTA */
-        .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        .galeria-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .galeria-grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        /* ESTILOS NUEVOS: ANIMACIONES DERECHAS */
-        .logo img {
-            transition: transform 0.3s ease, filter 0.3s ease; 
-        }
-        .logo img:hover {
-            transform: scale(1.08); 
-            filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); 
-        }
-
-        .footer-flag {
-            transition: transform 0.3s ease, filter 0.3s ease; 
-        }
-        .footer-flag:hover {
-            transform: scale(1.2); 
-            filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.4)); 
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -85,7 +13,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="#" onclick="abrirVideoTour(event)" data-key="nav-inicio">Video Tour</a></li>
                 <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
                 <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
                 <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
@@ -110,17 +38,17 @@
             <h2 class="subtitulo" data-key="sub-cerros">Cerros y Miradores</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/ogkm45qQDi4?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Cerro+de+Monserrate+Bogota')">
-                    <img src="images/monserrate.jpg" alt="Monserrate">
+                    <img src="images/Monserrate2.webp" alt="Monserrate">
                     <h4 data-key="mon-t">Cerro de Monserrate</h4>
                     <p data-key="mon-p">El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/CTY0a-xAK6Q?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Cerro+de+Guadalupe+Bogota')">
-                    <img src="images/guadalupe.jpg" alt="Guadalupe">
+                    <img src="images/guadalupe.webp" alt="Guadalupe">
                     <h4 data-key="gua-t">Cerro de Guadalupe</h4>
                     <p data-key="gua-p">Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/a8KlenCmtMQ?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Quebrada+La+Vieja+Bogota')">
-                    <img src="images/quebrada-vieja.jpg" alt="Quebrada La Vieja">
+                    <img src="images/quebrada-vieja.webp" alt="Quebrada La Vieja">
                     <h4 data-key="que-t">Quebrada La Vieja</h4>
                     <p data-key="que-p">Un tesoro hídrico escondido en el corazón de la urbe. Este sendero ecológico permite a los visitantes desconectarse del ritmo citadino para sumergirse en un ecosistema de bosque andino. El sonido del agua cristalina y la densidad del follaje ofrecen una experiencia de senderismo revitalizante, recordándonos la vital importancia de los cerros como reguladores hídricos.</p>
                 </div>
@@ -131,17 +59,17 @@
             <h2 class="subtitulo" data-key="sub-parques">Parques y Jardines</h2>
             <div class="experiencias-grid">
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/_iuSrwq7iAg?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Jardin+Botanico+Bogota')">
-                    <img src="images/jardin-botanico.jpg" alt="Jardín Botánico">
+                    <img src="images/jardin-botanico.webp" alt="Jardín Botánico">
                     <h4 data-key="jar-t">Jardín Botánico</h4>
                     <p data-key="jar-p">Un santuario de investigación y conservación que alberga el Tropicario más grande de Sudamérica. Este espacio es un aula viva donde se preserva la flora de los diversos ecosistemas colombianos, desde el bosque seco hasta el páramo, ofreciendo un refugio de biodiversidad esencial para la educación ambiental y el disfrute científico.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/OazJeZef_Kg?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Parque+Simon+Bolivar+Bogota')">
-                    <img src="images/simon-bolivar.jpg" alt="Parque Simón Bolívar">
+                    <img src="images/ParqueSimonBolivar.webp" alt="Parque Simón Bolívar">
                     <h4 data-key="sim-t">Parque Simón Bolívar</h4>
                     <p data-key="sim-p">Verdadero pulmón verde de la ciudad, este extenso complejo es el epicentro de la recreación y los grandes eventos culturales de Bogotá. Con su imponente lago central y amplias zonas verdes, ofrece a los ciudadanos un espacio de libertad para el deporte y el encuentro familiar, funcionando como un oasis de aire puro en medio de la dinámica urbana.</p>
                 </div>
                 <div class="experiencia-item" onclick="abrirModal('https://www.youtube.com/embed/YaylGtRq3Rk?autoplay=1', 'https://www.google.com/maps/search/?api=1&query=Parque+del+Chico+Bogota')">
-                    <img src="images/parque-chico.jpg" alt="Parque del Chicó">
+                    <img src="images/parque-chico.webp" alt="Parque del Chicó">
                     <h4 data-key="chi-t">Parque del Chicó</h4>
                     <p data-key="chi-p">Un rincón donde la historia y la elegancia se encuentran en jardines de estilo francés. La antigua casona de la hacienda, hoy convertida en museo, custodia la memoria de la zona norte de la ciudad. Sus senderos sombreados por árboles centenarios y su arquitectura colonial conservada invitan a un paseo tranquilo por el pasado aristocrático de Bogotá.</p>
                 </div>
@@ -168,17 +96,35 @@
         <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
             <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px;" data-key="galeria-titulo">Galería de Bogotá Roots</h2>
             <div class="galeria-grid">
-                <img src="images/fondo bogota.jpg" alt="Bogotá 1">
-                <img src="images/fondo bogota 2.jpg" alt="Bogotá 2">
-                <img src="images/Monserrate-Bogota.jpg" alt="Monserrate">
-                <img src="images/rock al parque.jpg" alt="Rock al Parque">
-                <img src="images/chorro de quevedo.jpg" alt="Chorro de Quevedo">
-                <img src="images/parque de la 93.jpg" alt="Parque 93">
-                <img src="images/jardin botanico.jpg" alt="Jardín Botánico">
-                <img src="images/gastronomia.jpg" alt="Gastronomía">
-                <img src="images/cultura.jpg" alt="Cultura">
-                <img src="images/nature.jpg" alt="Naturaleza">
-                <img src="images/arte.jpg" alt="Arte">
+              <img src="ImagenesPropiasWebp/BogotaRoots (53).webp" alt="Bogotá Roots 53" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (54).webp" alt="Bogotá Roots 54" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (55).webp" alt="Bogotá Roots 55" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (56).webp" alt="Bogotá Roots 56" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (57).webp" alt="Bogotá Roots 57" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (58).webp" alt="Bogotá Roots 58" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (59).webp" alt="Bogotá Roots 59" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (60).webp" alt="Bogotá Roots 60" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (61).webp" alt="Bogotá Roots 61" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (62).webp" alt="Bogotá Roots 62" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (63).webp" alt="Bogotá Roots 63" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (64).webp" alt="Bogotá Roots 64" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (65).webp" alt="Bogotá Roots 65" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (66).webp" alt="Bogotá Roots 66" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (67).webp" alt="Bogotá Roots 67" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (68).webp" alt="Bogotá Roots 68" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (69).webp" alt="Bogotá Roots 69" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (70).webp" alt="Bogotá Roots 70" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (71).webp" alt="Bogotá Roots 71" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (72).webp" alt="Bogotá Roots 72" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (73).webp" alt="Bogotá Roots 73" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (74).webp" alt="Bogotá Roots 74" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (75).webp" alt="Bogotá Roots 75" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (76).webp" alt="Bogotá Roots 76" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (77).webp" alt="Bogotá Roots 77" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (78).webp" alt="Bogotá Roots 78" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (79).webp" alt="Bogotá Roots 79" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (80).webp" alt="Bogotá Roots 80" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (81).webp" alt="Bogotá Roots 81" loading="lazy">  
             </div>
         </div>
     </div>
@@ -197,7 +143,9 @@
             </ul>
         </div>
     </div>
-
+    <a href="https://nahumb.itch.io/brgame" target="_blank" class="boton-flotante" title="¡Juega Bogotá Roots!">
+        <img src="images/BRico.webp" alt="Icono Bogotá Roots">
+    </a>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
@@ -235,7 +183,6 @@
             document.getElementById("videoYoutube").src = "";
         }
 
-        // AÑADIDO: Funciones para la Galería y Referencias
         function abrirRef() {
             document.getElementById("modalRef").style.display = "block";
         }
@@ -254,16 +201,59 @@
             document.body.style.overflow = "auto";
         }
 
-        // AÑADIDO: Cierra cualquier modal si haces clic fuera de la caja
+        // =========================================
+        // NUEVO: LÓGICA DEL MODAL VIDEO TOUR GLOBAL
+        // =========================================
+        function abrirVideoTour(event) {
+            event.preventDefault(); 
+
+            const videoId = "ZXUdKVIGflo"; 
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+            let modal = document.getElementById('globalVideoTourModal');
+
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'globalVideoTourModal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-tour" onclick="cerrarVideoTour()">×</span>
+                        <div class="video-container">
+                            <iframe id="globalTourIframe" src="${iframeSrc}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            } else {
+                document.getElementById('globalTourIframe').src = iframeSrc;
+            }
+
+            modal.style.display = 'block';
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function cerrarVideoTour() {
+            const modal = document.getElementById('globalVideoTourModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.getElementById('globalTourIframe').src = ""; 
+                document.body.style.overflow = "auto"; 
+            }
+        }
+
+        // Modificamos el onclick global para incluir el nuevo modal
         window.onclick = function(event) {
             if (event.target == document.getElementById("videoModal")) { cerrarModal(); }
             if (event.target == document.getElementById("modalGaleria")) { cerrarGaleria(); }
             if (event.target == document.getElementById("modalRef")) { cerrarRef(); }
+            
+            const modalVideoTour = document.getElementById('globalVideoTourModal');
+            if (modalVideoTour && event.target == modalVideoTour) { cerrarVideoTour(); }
         }
 
         const translations = {
             "es": {
-                "nav-inicio": "video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
                 "nat-titulo": "Naturaleza Capitalina", "sub-cerros": "Cerros y Miradores", "sub-parques": "Parques y Jardines",
                 "mon-t": "Cerro de Monserrate", "mon-p": "El vigilante eterno de la sabana y el principal centro de peregrinación de la ciudad. Ya sea ascendiendo por su sendero peatonal, el teleférico o el funicular, Monserrate ofrece una vista panorámica inigualable donde la metrópoli se rinde ante la majestuosidad de los Andes. Es un espacio sagrado que combina fe, gastronomía de altura y la mejor postal de Bogotá.",
                 "gua-t": "Cerro de Guadalupe", "gua-p": "Ubicado a una altitud mayor que su vecino Monserrate, Guadalupe es un santuario de paz y espiritualidad que ofrece una perspectiva única y menos explorada de la capital. Coronada por la imponente estatua de la Virgen de la Inmaculada Concepción, esta cima permite contemplar la extensión infinita de la sabana en un entorno de silencio y naturaleza pura.",
@@ -299,7 +289,6 @@
             });
         }
 
-        // AÑADIDO: Cargar el idioma guardado al cargar la página
         window.onload = function() {
             const savedLang = localStorage.getItem("selectedLanguage");
             if (savedLang) {

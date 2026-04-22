@@ -5,43 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bogotá Roots</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        /* ESTILOS GALERÍA MINIMALISTA */
-        .galeria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        .galeria-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .galeria-grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        /* ANIMACIONES  */
-        .logo img {
-            transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
-        }
-        .logo img:hover {
-            transform: scale(1.08); /* SOLO CRECE un 8%, NO SE TORCE */
-            filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); /* Mantiene la sombra verde */
-        }
-
-        .footer-flag {
-            transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave normal */
-        }
-        .footer-flag:hover {
-            transform: scale(1.2); /* SOLO CRECE un 20%, NO SE TORCE */
-            filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.4)); /* Mantiene el resplandor blanco */
-        }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -50,7 +14,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="video.html" data-key="nav-inicio">Video Tour</a></li>
+                <li><a href="#" onclick="abrirVideoTour(event)" data-key="nav-inicio">Video Tour</a></li>
                 <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
                 <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
                 <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
@@ -70,43 +34,43 @@
     <div class="slideshow-container">
         <div class="mySlides fade">
             <a href="explora!.html">
-                <img src="images/fondo bogota.jpg" style="width:100%">
+                <img src="images/TorreColpatria2.webp" style="width:100%">
                 <div class="text" data-key="slide-1">Torre Colpatria</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="cultura.html">
-                <img src="images/fondo bogota 2.jpg" style="width:100%">
+                <img src="images/CatedralPrimada.webp" style="width:100%">
                 <div class="text" data-key="slide-2">Catedral Primada</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="naturaleza.html">
-                <img src="images/Monserrate-Bogota.jpg" style="width:100%">
+                <img src="images/Monserrate.webp" style="width:100%">
                 <div class="text" data-key="slide-3">Monserrate</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="cultura.html">
-                <img src="images/rock al parque.jpg" style="width:100%">
+                <img src="images/rock al parque.webp" style="width:100%">
                 <div class="text" data-key="slide-4">Rock al Parque</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="cultura.html">
-                <img src="images/chorro de quevedo.jpg" style="width:100%">
+                <img src="images/chorro de quevedo.webp" style="width:100%">
                 <div class="text" data-key="slide-5">Chorro de Quevedo</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="gastronomia.html">
-                <img src="images/parque de la 93.jpg" style="width:100%">
+                <img src="images/parque de la 93.webp" style="width:100%">
                 <div class="text" data-key="slide-6">Parque de la 93</div>
             </a>
         </div>
         <div class="mySlides fade">
             <a href="naturaleza.html">
-                <img src="images/jardin botanico.jpg" style="width:100%">
+                <img src="images/jardin botanico.webp" style="width:100%">
                 <div class="text" data-key="slide-7">Jardín Botánico</div>
             </a>
         </div>
@@ -129,28 +93,28 @@
     <section class="destacados">
         <div class="tarjetas">
             <div class="tarjeta" onclick="location.href='gastronomia.html';" style="cursor: pointer;">
-                <img src="images/gastronomia.jpg" alt="Gastronomía">
+                <img src="images/Gastronomia.webp" alt="Gastronomía">
                 <h3 data-key="title-gastronomia">Gastronomía</h3>
                 <p data-key="desc-gastronomia">La gastronomía en La Candelaria destaca como un eje estratégico de saberes ancestrales y productos únicos. Esta zona posee una ventaja competitiva respaldada por 40 preparaciones típicas y el impulso de la Plaza de La Concordia. Con más de cien establecimientos y rutas especializadas, este ecosistema atrae al 30% de los turistas motivados por la cocina, preservando la identidad local frente a tendencias globales</p>
                 <a href="gastronomia.html" class="btn" data-key="btn-mas">Más información</a>
             </div>
 
             <div class="tarjeta" onclick="location.href='cultura.html';" style="cursor: pointer;">
-                <img src="images/cultura.jpg" alt="Cultura">
+                <img src="images/Cultura.webp" alt="Cultura">
                 <h3 data-key="title-cultura">Cultura</h3>
                 <p data-key="desc-cultura">El centro histórico de Bogotá, La Candelaria, es reconocido por el Ministerio de Cultura como un Sector de Interés Cultural que conserva el trazado urbano de la época colonial. Alberga instituciones de relevancia global como el Museo del Oro del Banco de la República, el cual custodia la colección de orfebrería prehispánica más grande del mundo. De acuerdo con el Plan Decenal de Cultura, la ciudad se consolida como un escenario de diálogo intercultural, donde la memoria histórica se protege a través de sus más de 60 museos y teatros.</p>
                 <a href="cultura.html" class="btn" data-key="btn-mas">Más información</a>
             </div>
 
             <div class="tarjeta" onclick="location.href='naturaleza.html';" style="cursor: pointer;">
-                <img src="images/nature.jpg" alt="Naturaleza">
+                <img src="images/Nature.webp" alt="Naturaleza">
                 <h3 data-key="title-naturaleza">Naturaleza</h3>
                 <p data-key="desc-naturaleza">Bogotá se caracteriza por su estrecha relación con los Cerros Orientales, considerados por la Secretaría de Ambiente como el principal pulmón de la ciudad con más de 14,000 hectáreas de bosque andino y páramo. El Cerro de Monserrate no solo es un centro de turismo religioso, sino un punto crítico para la observación de flora nativa. Por otro lado, el Jardín Botánico de Bogotá José Celestino Mutis lidera la investigación para la conservación de ecosistemas altoandinos, mitigando el impacto de la crisis climática en la zona urbana.</p>
                 <a href="naturaleza.html" class="btn" data-key="btn-mas">Más información</a>
             </div>
 
             <div class="tarjeta" onclick="location.href='arte.html';" style="cursor: pointer;">
-                <img src="images/arte.jpg" alt="Arte">
+                <img src="images/Arte2.webp" alt="Arte">
                 <h3 data-key="title-arte">Arte</h3>
                 <p data-key="desc-arte">La escena del arte urbano en Bogotá ha posicionado a la ciudad como una de las capitales mundiales del graffiti, según reportes de la Red de Distritos Creativos. Espacios como el Distrito Grafiti en la localidad de Puente Aranda han transformado zonas industriales en galerías de arte público que fomentan el turismo creativo. Asimismo, el barrio San Felipe se ha consolidado como el distrito artístico de vanguardia, donde más de 20 galerías y talleres de artistas locales promueven el mercado del arte contemporáneo nacional.</p>
                 <a href="arte.html" class="btn" data-key="btn-mas">Más información</a>
@@ -163,20 +127,37 @@
         <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
             <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px;" data-key="galeria-titulo">Galería de Bogotá Roots</h2>
             
-            /* GALERIA DE FOTOS */
-
             <div class="galeria-grid">
-                <img src="images/fondo bogota.jpg" alt="Bogotá 1">
-                <img src="images/fondo bogota 2.jpg" alt="Bogotá 2">
-                <img src="images/Monserrate-Bogota.jpg" alt="Monserrate">
-                <img src="images/rock al parque.jpg" alt="Rock al Parque">
-                <img src="images/chorro de quevedo.jpg" alt="Chorro de Quevedo">
-                <img src="images/parque de la 93.jpg" alt="Parque 93">
-                <img src="images/jardin botanico.jpg" alt="Jardín Botánico">
-                <img src="images/gastronomia.jpg" alt="Gastronomía">
-                <img src="images/cultura.jpg" alt="Cultura">
-                <img src="images/nature.jpg" alt="Naturaleza">
-                <img src="images/arte.jpg" alt="Arte">
+                <img src="images/Ajiaco.webp" alt="Ajiaco" loading="lazy">
+                <img src="images/Arte.webp" alt="Arte" loading="lazy">
+                <img src="images/Arte2.webp" alt="Arte 2" loading="lazy">
+                <img src="images/BarrioSanFelipe.webp" alt="Barrio San Felipe" loading="lazy">
+                <img src="images/calle-26.webp" alt="Calle 26" loading="lazy">
+                <img src="images/CatedralPrimada.webp" alt="Catedral Primada" loading="lazy">
+                <img src="images/CentroCulturalGGM.webp" alt="Centro Cultural GGM" loading="lazy">
+                <img src="images/Changua.webp" alt="Changua" loading="lazy">
+                <img src="images/chorro de quevedo.webp" alt="Chorro de Quevedo" loading="lazy">
+                <img src="images/Cultura.webp" alt="Cultura" loading="lazy">
+                <img src="images/DistritoGrafiti.webp" alt="Distrito Grafiti" loading="lazy">
+                <img src="images/fragmentos.webp" alt="Fragmentos" loading="lazy">
+                <img src="images/Gastronomia.webp" alt="Gastronomía" loading="lazy">
+                <img src="images/guadalupe.webp" alt="Guadalupe" loading="lazy">
+                <img src="images/jardin botanico.webp" alt="Jardín Botánico" loading="lazy">
+                <img src="images/jardin-botanico.webp" alt="Jardín Botánico 2" loading="lazy">
+                <img src="images/laCandelaria.webp" alt="La Candelaria" loading="lazy">
+                <img src="images/LaPuertaFalsa.webp" alt="La Puerta Falsa" loading="lazy">
+                <img src="images/mambo.webp" alt="MAMBO" loading="lazy">
+                <img src="images/Monserrate.webp" alt="Monserrate" loading="lazy">
+                <img src="images/Monserrate2.webp" alt="Monserrate 2" loading="lazy">
+                <img src="images/MuralesCandelaria.webp" alt="Murales Candelaria" loading="lazy">
+                <img src="images/MuseoBotero.webp" alt="Museo Botero" loading="lazy">
+                <img src="images/museo-oro.webp" alt="Museo del Oro" loading="lazy">
+                <img src="images/Nature.webp" alt="Naturaleza" loading="lazy">
+                <img src="images/parque de la 93.webp" alt="Parque de la 93" loading="lazy">
+                <img src="images/parque-chico.webp" alt="Parque el Chicó" loading="lazy">
+                <img src="images/ParqueSimonBolivar.webp" alt="Parque Simón Bolívar" loading="lazy">
+                <img src="images/plaza paloquemao.webp" alt="Plaza Paloquemao" loading="lazy">
+                <img src="images/plaza perseverancia.webp" alt="Plaza Perseverancia" loading="lazy">
             </div>
         </div>
     </div>
@@ -195,6 +176,10 @@
             </ul>
         </div>
     </div>
+
+    <a href="https://nahumb.itch.io/brgame" target="_blank" class="boton-flotante" title="¡Juega Bogotá Roots!">
+        <img src="images/BRico.webp" alt="Icono Bogotá Roots">
+    </a>
 
     <footer>
         <div class="footer-container">
@@ -323,13 +308,67 @@
             document.body.style.overflow = "auto";
         }
 
+        // =========================================
+        // NUEVO: LÓGICA DEL MODAL VIDEO TOUR GLOBAL
+        // =========================================
+        function abrirVideoTour(event) {
+            event.preventDefault(); 
+
+            // AQUÍ PUSE EL ID DEL VIDEO
+            const videoId = "ZXUdKVIGflo"; 
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+            let modal = document.getElementById('globalVideoTourModal');
+
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'globalVideoTourModal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-tour" onclick="cerrarVideoTour()">&times;</span>
+                        <div class="video-container">
+                            <iframe id="globalTourIframe" src="${iframeSrc}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            } else {
+                document.getElementById('globalTourIframe').src = iframeSrc;
+            }
+
+            modal.style.display = 'block';
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function cerrarVideoTour() {
+            const modal = document.getElementById('globalVideoTourModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.getElementById('globalTourIframe').src = ""; 
+                document.body.style.overflow = "auto"; 
+            }
+        }
+
+        window.onclick = function(event) {
+            const modalRef = document.getElementById("modalRef");
+            if (modalRef && event.target == modalRef) { cerrarRef(); }
+
+            const modalGaleria = document.getElementById("modalGaleria");
+            if (modalGaleria && event.target == modalGaleria) { cerrarGaleria(); }
+
+            const modalVideoTour = document.getElementById('globalVideoTourModal');
+            if (modalVideoTour && event.target == modalVideoTour) { cerrarVideoTour(); }
+        }
+
         window.onload = function() {
             const savedLang = localStorage.getItem("selectedLanguage");
             if (savedLang) {
                 document.getElementById("language-select").value = savedLang;
                 changeLanguage();
             }
-            showSlides(); 
+            if (typeof showSlides === "function") {
+                showSlides(); 
+            }
         };
     </script>
 </body>

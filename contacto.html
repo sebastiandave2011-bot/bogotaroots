@@ -19,16 +19,7 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .buzon-contacto input, .buzon-contacto textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0 20px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            box-sizing: border-box;
+            overflow: hidden; /* Asegura que el iframe no se salga */
         }
 
         /* Redes Sociales y Linktree */
@@ -43,7 +34,7 @@
         .linktree-btn {
             display: inline-block;
             padding: 15px 30px;
-            background: #43E660; /* Color Linktree */
+            background: #43E660; 
             color: white;
             font-weight: 700;
             border-radius: 50px;
@@ -77,7 +68,7 @@
         .wpp-flotante:hover { transform: scale(1.1); }
         .wpp-flotante img { width: 35px; height: 35px; }
 
-        /* ESTILOS NUEVOS: GALERÍA MINIMALISTA */
+        /* GALERÍA MINIMALISTA */
         .galeria-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -96,21 +87,13 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        /* ESTILOS NUEVOS: ANIMACIONES DERECHAS */
+        /* ANIMACIONES */
         .logo img {
             transition: transform 0.3s ease, filter 0.3s ease; 
         }
         .logo img:hover {
             transform: scale(1.08); 
             filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); 
-        }
-
-        .footer-flag {
-            transition: transform 0.3s ease, filter 0.3s ease; 
-        }
-        .footer-flag:hover {
-            transform: scale(1.2); 
-            filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.4)); 
         }
     </style>
 </head>
@@ -121,14 +104,14 @@
         </div>
         <nav>
             <ul>
-                <li><a href="video.html" data-key="nav-inicio">video Tour</a></li>
+                <li><a href="#" onclick="abrirVideoTour(event)" data-key="nav-inicio">Video Tour</a></li>
                 <li><a href="gastronomia.html" data-key="nav-gastronomia">Gastronomía</a></li>
                 <li><a href="cultura.html" data-key="nav-cultura">Cultura</a></li>
                 <li><a href="naturaleza.html" data-key="nav-naturaleza">Naturaleza</a></li>
                 <li><a href="arte.html" data-key="nav-arte">Arte</a></li>
                 <li><a href="explora!.html" data-key="nav-explora">¡Explora!</a></li>
                 <li><a href="contacto.html" data-key="nav-contacto">Contacto</a></li>
-                <ul><li><a href="index.html" data-key="nav-home">Inicio</a></li></ul>
+                <li><a href="index.html" data-key="nav-home">Inicio</a></li>
             </ul>
         </nav>
         <div class="idioma">
@@ -146,25 +129,20 @@
             <div class="redes-info">
                 <h2 class="subtitulo" style="border: none; text-align: center;" data-key="cont-redes-t">Nuestras Redes</h2>
                 <p data-key="cont-redes-p">Síguenos para estar al tanto de las rutas y eventos en la capital.</p>
-                <img src="images/redes.png" alt="Redes" style="width: 150px; margin: 20px auto; display: block;">
+                <img src="images/redes.png" alt="Redes" style="width: 200px; margin: 20px auto; display: block;">
                 <a href="https://linktr.ee/CoversNoPro" target="_blank" class="linktree-btn" data-key="btn-linktree">VISITAR LINKTREE</a>
-                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;" data-key="cont-email">Correo: sebastiandave2011@gmail.com</p>
+                
             </div>
 
             <div class="buzon-contacto">
                 <h2 class="subtitulo" style="border-left: 5px solid #6c5ce7; padding-left: 10px;" data-key="cont-form-t">Escríbenos</h2>
-                <form action="mailto:sebastiandave2011@gmail.com" method="post" enctype="text/plain">
-                    <label data-key="lbl-nombre">Nombre Completo</label>
-                    <input type="text" name="nombre" id="input-nombre" placeholder="Tu nombre..." required>
-                    
-                    <label data-key="lbl-correo">Correo Electrónico</label>
-                    <input type="email" name="email" id="input-email" placeholder="ejemplo@correo.com" required>
-                    
-                    <label data-key="lbl-mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="txt-mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                    
-                    <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;" data-key="btn-enviar">ENVIAR MENSAJE</button>
-                </form>
+                
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdISRlNthbZHtXSslzwRC2jqzI8xlVDBAus9kwC7EeSDNqk6A/viewform?embedded=true" 
+                    width="100%" 
+                    height="750" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Cargando…</iframe>
             </div>
         </div>
     </main>
@@ -174,17 +152,12 @@
         <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
             <h2 style="color: white; text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px;" data-key="galeria-titulo">Galería de Bogotá Roots</h2>
             <div class="galeria-grid">
-                <img src="images/fondo bogota.jpg" alt="Bogotá 1">
-                <img src="images/fondo bogota 2.jpg" alt="Bogotá 2">
-                <img src="images/Monserrate-Bogota.jpg" alt="Monserrate">
-                <img src="images/rock al parque.jpg" alt="Rock al Parque">
-                <img src="images/chorro de quevedo.jpg" alt="Chorro de Quevedo">
-                <img src="images/parque de la 93.jpg" alt="Parque 93">
-                <img src="images/jardin botanico.jpg" alt="Jardín Botánico">
-                <img src="images/gastronomia.jpg" alt="Gastronomía">
-                <img src="images/cultura.jpg" alt="Cultura">
-                <img src="images/nature.jpg" alt="Naturaleza">
-                <img src="images/arte.jpg" alt="Arte">
+                <img src="ImagenesPropiasWebp/BogotaRoots (140).webp" alt="Bogotá Roots" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (141).webp" alt="Bogotá Roots" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (142).webp" alt="Bogotá Roots" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (143).webp" alt="Bogotá Roots" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (144).webp" alt="Bogotá Roots" loading="lazy">
+                <img src="ImagenesPropiasWebp/BogotaRoots (145).webp" alt="Bogotá Roots" loading="lazy">
             </div>
         </div>
     </div>
@@ -195,11 +168,8 @@
             <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #15573f; font-size: 1.8rem; margin-bottom: 10px;" data-key="ref-titulo">Referencias Bibliográficas (APA 7)</h2>
             <div style="width: 60px; height: 4px; background-color: #00a76f; margin-bottom: 30px;"></div>
             <ul style="list-style: none; padding: 0;">
-                <li data-key="ref-1" style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Cote Daza, S. P., Guzmán Jiménez, M. J., Quintero Hernández, L. F., Beltrán Virgüez, J. E., & Barón-Chivara, J. A. (2024). Análisis del Potencial del Turismo Gastronómico en la localidad La Candelaria, Bogotá. <i>Cuadernos de Administración</i>, 40(79). <a href="https://doi.org/10.25100/cdea.v40i79.13411" target="_blank" style="color: #00a76f;">https://doi.org/10.25100/cdea.v40i79.13411</a></li>
-                <li data-key="ref-2" style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Ministerio de Cultura de Colombia. (2023). <i>Patrimonio Cultural Material de Bogotá</i>. Recuperado de <a href="https://www.mincultura.gov.co" target="_blank" style="color: #00a76f;">https://www.mincultura.gov.co</a></li>
-                <li data-key="ref-3" style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Secretaría Distrital de Ambiente. (2024). <i>Estructura Ecológica Principal de Bogotá</i>. Recuperado de <a href="https://www.ambientebogota.gov.co" target="_blank" style="color: #00a76f;">https://www.ambientebogota.gov.co</a></li>
-                <li data-key="ref-4" style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Secretaría de Cultura, Recreación y Deporte. (2023). <i>Distritos Creativos de Bogotá</i>. Recuperado de <a href="https://www.culturarecreacionydeporte.gov.co" target="_blank" style="color: #00a76f;">https://www.culturarecreacionydeporte.gov.co</a></li>
-                <li data-key="ref-5" style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">OpenAI. (2026). <i>ChatGPT (Modelo Gemini 3 Flash)</i> [Software de Inteligencia Artificial]. Generación de estructura y asistencia técnica. <a href="https://gemini.google.com/" target="_blank" style="color: #00a76f;">https://gemini.google.com/</a></li>
+                <li style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Cote Daza, S. P., et al. (2024). Análisis del Potencial del Turismo Gastronómico...</li>
+                <li style="font-size: 0.9rem; color: #444; margin-bottom: 20px; line-height: 1.6; padding-left: 20px; border-left: 3px solid #ddd;">Ministerio de Cultura de Colombia. (2023). Patrimonio Cultural Material...</li>
             </ul>
         </div>
     </div>
@@ -207,13 +177,17 @@
     <a href="https://wa.me/573102256944" class="wpp-flotante" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+    
+    <a href="https://nahumb.itch.io/brgame" target="_blank" class="boton-flotante" title="¡Juega Bogotá Roots!">
+        <img src="images/BRico.webp" alt="Icono Bogotá Roots">
+    </a>
 
     <footer>
         <div class="footer-container">
             <div class="footer-left">
                 <div class="legend-wrapper">
-                    <a href="https://bogota.gov.co/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Bandera_bogota.png" alt="Bandera de Bogotá" class="footer-flag">
+                    <a href="https://bogota.gov.co/" target="_blank">
+                        <img src="images/Bandera_bogota.png" alt="Bandera" class="footer-flag">
                     </a>
                     <p data-key="footer-leyenda">Explorando la esencia de la capital.</p>
                 </div>
@@ -225,8 +199,8 @@
             <div class="footer-right">
                 <div class="social-wrapper">
                     <span data-key="footer-redes">Síguenos en redes</span>
-                    <a href="https://linktr.ee/CoversNoPro" target="_blank" rel="noopener noreferrer">
-                        <img src="images/redes.png" alt="Redes Sociales" class="footer-social-img">
+                    <a href="https://linktr.ee/CoversNoPro" target="_blank">
+                        <img src="images/redes.png" alt="Redes" class="footer-social-img">
                     </a>
                 </div>
             </div>
@@ -234,26 +208,50 @@
     </footer>
 
     <script>
-        // AÑADIDO: Funciones para la Galería y Referencias
-        function abrirRef() {
-            document.getElementById("modalRef").style.display = "block";
-        }
-
-        function cerrarRef() {
-            document.getElementById("modalRef").style.display = "none";
-        }
-
-        function abrirGaleria() {
-            document.getElementById("modalGaleria").style.display = "block";
+        function abrirRef() { document.getElementById("modalRef").style.display = "block"; }
+        function cerrarRef() { document.getElementById("modalRef").style.display = "none"; }
+        function abrirGaleria() { 
+            document.getElementById("modalGaleria").style.display = "block"; 
             document.body.style.overflow = "hidden";
         }
-
-        function cerrarGaleria() {
-            document.getElementById("modalGaleria").style.display = "none";
+        function cerrarGaleria() { 
+            document.getElementById("modalGaleria").style.display = "none"; 
             document.body.style.overflow = "auto";
         }
 
-        // AÑADIDO: Cierra cualquier modal si haces clic fuera de la caja
+        function abrirVideoTour(event) {
+            event.preventDefault(); 
+            const videoId = "ZXUdKVIGflo"; 
+            const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            let modal = document.getElementById('globalVideoTourModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'globalVideoTourModal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-tour" onclick="cerrarVideoTour()">×</span>
+                        <div class="video-container">
+                            <iframe id="globalTourIframe" src="${iframeSrc}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            } else {
+                document.getElementById('globalTourIframe').src = iframeSrc;
+            }
+            modal.style.display = 'block';
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function cerrarVideoTour() {
+            const modal = document.getElementById('globalVideoTourModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.getElementById('globalTourIframe').src = ""; 
+                document.body.style.overflow = "auto"; 
+            }
+        }
+
         window.onclick = function(event) {
             if (event.target == document.getElementById("modalGaleria")) { cerrarGaleria(); }
             if (event.target == document.getElementById("modalRef")) { cerrarRef(); }
@@ -261,21 +259,17 @@
 
         const translations = {
             "es": {
-                "nav-inicio": "video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
+                "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomía", "nav-cultura": "Cultura", "nav-naturaleza": "Naturaleza", "nav-arte": "Arte", "nav-explora": "¡Explora!", "nav-contacto": "Contacto", "nav-home": "Inicio",
                 "cont-titulo": "Ponte en Contacto", "cont-redes-t": "Nuestras Redes", "cont-redes-p": "Síguenos para estar al tanto de las rutas y eventos en la capital.",
                 "btn-linktree": "VISITAR LINKTREE", "cont-email": "Correo: sebastiandave2011@gmail.com",
-                "cont-form-t": "Escríbenos", "lbl-nombre": "Nombre Completo", "lbl-correo": "Correo Electrónico", "lbl-mensaje": "Mensaje", "btn-enviar": "ENVIAR MENSAJE",
-                "ph-nombre": "Tu nombre...", "ph-email": "ejemplo@correo.com", "ph-mensaje": "¿En qué podemos ayudarte?",
-                "footer-leyenda": "Explorando la esencia de la capital.", "footer-redes": "Síguenos en redes",
+                "cont-form-t": "Escríbenos", "footer-leyenda": "Explorando la esencia de la capital.", "footer-redes": "Síguenos en redes",
                 "ref-titulo": "Referencias Bibliográficas (APA 7)", "galeria-titulo": "Galería de Bogotá Roots"
             },
             "en": {
                 "nav-inicio": "Video Tour", "nav-gastronomia": "Gastronomy", "nav-cultura": "Culture", "nav-naturaleza": "Nature", "nav-arte": "Art", "nav-explora": "Explore!", "nav-contacto": "Contact", "nav-home": "Home",
                 "cont-titulo": "Get in Touch", "cont-redes-t": "Our Social Media", "cont-redes-p": "Follow us to keep up with routes and events in the capital.",
                 "btn-linktree": "VISIT LINKTREE", "cont-email": "Email: sebastiandave2011@gmail.com",
-                "cont-form-t": "Write to us", "lbl-nombre": "Full Name", "lbl-correo": "Email Address", "lbl-mensaje": "Message", "btn-enviar": "SEND MESSAGE",
-                "ph-nombre": "Your name...", "ph-email": "example@mail.com", "ph-mensaje": "How can we help you?",
-                "footer-leyenda": "Exploring the essence of the capital.", "footer-redes": "Follow us",
+                "cont-form-t": "Write to us", "footer-leyenda": "Exploring the essence of the capital.", "footer-redes": "Follow us",
                 "ref-titulo": "Bibliographic References (APA 7)", "galeria-titulo": "Bogota Roots Gallery"
             }
         };
@@ -283,20 +277,12 @@
         function changeLanguage() {
             const lang = document.getElementById("language-select").value;
             localStorage.setItem("selectedLanguage", lang); 
-            
-            // Traducir textos normales
             document.querySelectorAll("[data-key]").forEach(el => {
                 const key = el.getAttribute("data-key");
                 if (translations[lang][key]) { el.innerText = translations[lang][key]; }
             });
-
-            // Traducir Placeholders
-            document.getElementById("input-nombre").placeholder = translations[lang]["ph-nombre"];
-            document.getElementById("input-email").placeholder = translations[lang]["ph-email"];
-            document.getElementById("txt-mensaje").placeholder = translations[lang]["ph-mensaje"];
         }
 
-        // AÑADIDO: Cargar el idioma guardado al cargar la página
         window.onload = function() {
             const savedLang = localStorage.getItem("selectedLanguage");
             if (savedLang) {
