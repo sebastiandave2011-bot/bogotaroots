@@ -133,3 +133,4 @@ window.onclick = function(event) {
 
 // Usar load para asegurar que todo el HTML (nav, footer) esté listo
 window.addEventListener("load", inicializar);
+

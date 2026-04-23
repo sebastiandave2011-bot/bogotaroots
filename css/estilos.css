@@ -40,6 +40,9 @@ a {
     transition: 0.3s;
 }
 
+/* ========
+   HEADER 
+   ======== */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -47,20 +50,37 @@ header {
     align-items: center;
     background-color: aliceblue;
     color: black;
-    /* AJUSTE: Reducción de padding para banner más delgado */
-    padding: 5px 40px; 
+    padding: 5px 80px; /* Padding pequeño para un banner delgado */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-
-    /* --- CAMBIOS PARA HACERLO FIJO --- */
     position: sticky;
     top: 0;
     z-index: 9995; 
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
 }
 
 header .logo img {
-    /* AJUSTE: Reducción de altura máxima del logo */
-    max-height: 70px; 
+    max-height: 90px; /* Reducción física para no ensanchar el header */
     width: auto;
+    margin: 10px 0 -4px 0;
+    transform: scale(1.6); /* Escala visual para que se vea grande */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ANIMACIONES DEL LOGO DEL HEADER (PC Y MÓVIL) */
+header .logo img:hover, 
+header .logo img:active {
+    transform: scale(1.8) !important; /* Animación al pasar el mouse o tocar en móvil */
+    filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); 
+}
+
+/* =========================================
+   CLASE DINÁMICA PARA EL HEADER AL BAJAR
+   ========================================= */
+header.header-scrolled {
+    background-color: rgba(240, 248, 255, 0.75) !important; 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 167, 111, 0.15); 
 }
 
 header nav ul {
@@ -84,6 +104,20 @@ header nav ul li a:hover {
     color: white;
     background-color: #00a76f;
     border-bottom: none;
+}
+
+nav ul li a[href="index.html"] {
+    background-color: #00a76f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a[href="index.html"]:hover {
+    background-color: #007d53;
 }
 
 .slideshow-container {
@@ -292,7 +326,6 @@ header nav ul li a:hover {
 footer {
     background-color: rgba(45, 52, 54, 0.9);
     color: #ffffff;
-    /* AJUSTE: Reducción de padding para footer más estrecho */
     padding: 17px 0; 
     margin-top: 50px;
 }
@@ -350,12 +383,11 @@ footer {
 }
 
 .footer-center p a {
-    display: inline-block; /* Ayuda a que el margen 0 sea más efectivo */
-    margin-top: -2px; /* Ajuste milimétrico para subirlos aún más */
+    display: inline-block; 
+    margin-top: -2px; 
 }
 
 .footer-social-img {
-    /* AJUSTE: Reducción de tamaño de los iconos sociales */
     height: 45px; 
     width: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -449,34 +481,6 @@ footer {
     font-size: 1rem;
 }
 
-
-nav ul li a[href="index.html"] {
-    background-color: #00a76f;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav ul li a[href="index.html"]:hover {
-    background-color: #007d53;
-}
-
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-    }
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-    header nav ul li {
-        margin: 10px 0;
-    }
-}
 /*REFERENCIAS (APA 7)*/
 .seccion-referencias {
     background-color: rgba(255, 255, 255, 0.5); 
@@ -559,17 +563,7 @@ nav ul li a[href="index.html"]:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* ANIMACIONES DEL LOGO DEL HEADER */
-.logo img {
-    transition: transform 0.3s ease, filter 0.3s ease; 
-}
-.logo img:hover {
-    transform: scale(1.08); 
-    filter: drop-shadow(0px 5px 15px rgba(0, 167, 111, 0.4)); 
-}
-/* =========================================
-   ESTILOS MODAL DE VIDEO (De Gastronomía)
-   ========================================= */
+/* ESTILOS MODAL DE VIDEO Y GENERALES */
 .modal {
     display: none; 
     position: fixed; 
@@ -602,13 +596,11 @@ nav ul li a[href="index.html"]:hover {
     z-index: 2100;
 }
 
-/* Indicador de clic para las tarjetas */
 .experiencia-item {
     cursor: pointer; 
 }
-/* =========================================
-   BOTÓN FLOTANTE DEL JUEGO
-   ========================================= */
+
+/* BOTÓN FLOTANTE DEL JUEGO */
 .boton-flotante {
     position: fixed;
     bottom: 30px;
@@ -632,9 +624,8 @@ nav ul li a[href="index.html"]:hover {
     transform: scale(1.1) translateY(-5px);
     filter: drop-shadow(0px 8px 20px rgba(0, 167, 111, 0.6));
 }
-/* =========================================
-   MODAL PARA EL VIDEO TOUR GLOBAL
-   ========================================= */
+
+/* MODAL PARA EL VIDEO TOUR GLOBAL */
 #globalVideoTourModal {
     display: none; 
     position: fixed; 
@@ -688,4 +679,104 @@ nav ul li a[href="index.html"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* =========================================
+   RESPONSIVE MÓVIL (MENÚ LATERAL IZQUIERDO)
+   ========================================= */
+@media (max-width: 800px) {
+    header {
+        justify-content: space-between; 
+        padding: 10px 20px;
+    }
+    
+    .menu-icon {
+        display: block !important;
+        order: 1; 
+    }
+    
+    .logo {
+        order: 2; 
+        margin: 0 auto; 
+    }
+    
+    .idioma {
+        order: 3; 
+    }
+    
+    #menu-principal {
+        position: fixed;
+        top: 0;
+        left: -300px; 
+        width: 250px;
+        height: 100vh;
+        
+        background-color: rgba(240, 248, 255, 0.70); 
+        backdrop-filter: blur(8px); 
+        -webkit-backdrop-filter: blur(8px); 
+        
+        box-shadow: 5px 0 20px rgba(0,0,0,0.2); 
+        transition: left 0.4s ease; 
+        z-index: 10005;
+        display: block; 
+        padding-top: 70px;
+    }
+    
+    #menu-principal.activo {
+        left: 0; 
+    }
+    
+    .cerrar-menu {
+        display: block !important;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 40px;
+        color: #00a76f;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    
+    header nav ul li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* FOOTER APILADO EN MÓVIL */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px; 
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .legend-wrapper {
+        justify-content: center; 
+    }
+    
+    .social-wrapper {
+        justify-content: center; 
+        flex-direction: column; 
+        gap: 5px; 
+    }
+
+    .footer-center {
+        margin-bottom: 0px; 
+    }
+
+    footer {
+        padding-top: 25px; 
+        padding-bottom: 30px; 
+    }
 }
